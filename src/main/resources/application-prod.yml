@@ -1,0 +1,24 @@
+server:
+  port: 8088
+
+spring:
+  datasource:
+    url: jdbc:postgresql://dpg-cr5l0e52ng1s73efpng0-a.singapore-postgres.render.com:5432/pbl06_shoe_shop_v2
+    username: dnanh01
+    password: vQzHlqw1lJ69Os9hazqnsGyXcc5d2o5F
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+logging:
+  file:
+    path: logs/prod
+  logback:
+    rollingpolicy:
+      file-name-pattern: ${logging.file.path}/${spring.application.name}-%d{yyyy-MM-dd}.%i.log
+      max-file-size: 10MB

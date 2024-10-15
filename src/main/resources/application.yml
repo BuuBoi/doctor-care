@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: doctorcare
+  profiles:
+    active: local
+logging:
+  file:
+    name: ${logging.file.path}/${spring.application.name}.log

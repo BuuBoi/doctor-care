@@ -1,0 +1,35 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /DoctorCare
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/doctorcare888
+    username: root
+    password: 120101
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+jwt:
+  signerKey: "2DU0iJ0m/Mug/wRqkvV78yjsbIPTss8pKA6ju5fNMfqt+jEAs9zzkLH6smWW0vmC"
+
+
+springdoc:
+  api-docs:
+    path: /api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+
+logging:
+  file:
+    path: logs/local
+
+
+
+
