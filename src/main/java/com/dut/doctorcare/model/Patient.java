@@ -52,6 +52,12 @@ public class Patient extends BaseClazz {
 
     @OneToMany(mappedBy = "patient")
     private List<HistoryMedical> historyMedicals;
+
+    @OneToMany(mappedBy = "patient")
+    private List<Appointment> appointments;
+
+    @OneToMany(mappedBy = "patient")
+    private List<Review> reviews;
     // Enum for Gender
     public enum Gender {
         MALE, FEMALE, OTHER

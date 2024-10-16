@@ -18,6 +18,8 @@ import java.time.LocalDate;
 @Table(name = "schedules")
 public class Schedule extends BaseClazz{
     private LocalDate date;
+
+    @Enumerated(EnumType.STRING)
     private Status status;
 
     @OneToOne

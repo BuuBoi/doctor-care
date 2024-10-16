@@ -64,7 +64,7 @@ public class AuthenticationServiceImpl implements AuthenticationService {
             throw new AppException(ErrorCode.EMAIL_OR_PASSWORD_NOT_FOUND);
         }
 
-        return AuthenticationResponse.builder().success(isAuthencated).token(generateToken(user)).build();
+        return AuthenticationResponse.builder().id(user.getId().toString()).token(generateToken(user)).build();
 
 
     }
@@ -91,7 +91,7 @@ public class AuthenticationServiceImpl implements AuthenticationService {
         }
     }
     private String buildScope(User user) {
-        return user.getRole().getRoleName().equals("ADMIN") ? "ADMIN" : "USER";
+        return user.getRole().getRoleName().name();
     }
 
 }

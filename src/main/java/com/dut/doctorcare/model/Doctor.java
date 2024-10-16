@@ -8,6 +8,7 @@ import lombok.Setter;
 import lombok.experimental.SuperBuilder;
 
 import java.math.BigDecimal;
+import java.time.LocalDate;
 import java.util.List;
 import java.util.UUID;
 
@@ -38,7 +39,21 @@ public class Doctor extends BaseClazz {
 
     @OneToMany(mappedBy = "doctor")
     private List<HistoryMedical> historyMedicals;
+
+    @OneToMany(mappedBy = "doctor")
+    private List<Review> reviews;
+
+    @OneToMany(mappedBy = "doctor")
+    private List<Schedule> schedules;
+
+    private String firstName;
+    private String lastName;
+    private String phone;
+    private String position;
+    private Patient.Gender gender;
+    private LocalDate dateOfBirth;
     private String bio;
     private int experience;
     private BigDecimal price;
+
 }

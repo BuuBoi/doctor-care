@@ -17,8 +17,12 @@ import java.time.LocalDate;
 @Entity
 @Table(name = "appointments")
 public class Appointment extends BaseClazz {
+
     private LocalDate date;
-    private Status status;  // pending, accepted, rejected
+
+    @Enumerated(EnumType.STRING)
+    private Status status;
+
     private Double fee;
 
     @ManyToOne
@@ -34,6 +38,6 @@ public class Appointment extends BaseClazz {
     private Schedule schedule;
 
     public enum Status {
-        PENDING, ACCEPTED, REJECTED
+        PENDING, ACCEPTED, REJECTED, COMPLETED
     }
 }

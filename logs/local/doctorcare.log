@@ -1,211 +1,916 @@
-2024-10-15T09:46:56.921+07:00  INFO 19884 --- [doctorcare] [restartedMain] c.dut.doctorcare.DoctorCareApplication   : Starting DoctorCareApplication using Java 17.0.12 with PID 19884 (D:\DATN\doctor-care\doctor-care\target\classes started by nguye in D:\DATN\doctor-care\doctor-care)
-2024-10-15T09:46:56.923+07:00  INFO 19884 --- [doctorcare] [restartedMain] c.dut.doctorcare.DoctorCareApplication   : The following 1 profile is active: "local"
-2024-10-15T09:46:56.960+07:00  INFO 19884 --- [doctorcare] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2024-10-15T09:46:56.960+07:00  INFO 19884 --- [doctorcare] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2024-10-15T09:46:58.018+07:00  INFO 19884 --- [doctorcare] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-10-15T09:46:58.068+07:00  INFO 19884 --- [doctorcare] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 31 ms. Found 0 JPA repository interfaces.
-2024-10-15T09:46:58.754+07:00  INFO 19884 --- [doctorcare] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2024-10-15T09:46:58.761+07:00  INFO 19884 --- [doctorcare] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-10-15T09:46:58.761+07:00  INFO 19884 --- [doctorcare] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
-2024-10-15T09:46:58.817+07:00  INFO 19884 --- [doctorcare] [restartedMain] o.a.c.c.C.[.[localhost].[/DoctorCare]    : Initializing Spring embedded WebApplicationContext
-2024-10-15T09:46:58.817+07:00  INFO 19884 --- [doctorcare] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1852 ms
-2024-10-15T09:46:59.124+07:00  INFO 19884 --- [doctorcare] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-10-15T09:46:59.169+07:00  INFO 19884 --- [doctorcare] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
-2024-10-15T09:46:59.199+07:00  INFO 19884 --- [doctorcare] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-10-15T09:46:59.445+07:00  INFO 19884 --- [doctorcare] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-10-15T09:46:59.469+07:00  INFO 19884 --- [doctorcare] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-10-15T09:46:59.721+07:00  INFO 19884 --- [doctorcare] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3b903d87
-2024-10-15T09:46:59.729+07:00  INFO 19884 --- [doctorcare] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-10-15T09:46:59.768+07:00  WARN 19884 --- [doctorcare] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-10-15T09:47:00.910+07:00  INFO 19884 --- [doctorcare] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-10-15T09:47:03.115+07:00  INFO 19884 --- [doctorcare] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-10-15T09:47:03.494+07:00  WARN 19884 --- [doctorcare] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-10-15T09:47:04.129+07:00  INFO 19884 --- [doctorcare] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
-2024-10-15T09:47:04.909+07:00  INFO 19884 --- [doctorcare] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2024-10-15T09:47:05.032+07:00  INFO 19884 --- [doctorcare] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/DoctorCare'
-2024-10-15T09:47:05.053+07:00  INFO 19884 --- [doctorcare] [restartedMain] c.dut.doctorcare.DoctorCareApplication   : Started DoctorCareApplication in 8.577 seconds (process running for 9.416)
-2024-10-15T09:47:05.308+07:00  INFO 19884 --- [doctorcare] [RMI TCP Connection(3)-192.168.1.10] o.a.c.c.C.[.[localhost].[/DoctorCare]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-10-15T09:47:05.308+07:00  INFO 19884 --- [doctorcare] [RMI TCP Connection(3)-192.168.1.10] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-10-15T09:47:05.308+07:00  INFO 19884 --- [doctorcare] [RMI TCP Connection(3)-192.168.1.10] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
-2024-10-15T09:47:05.510+07:00 ERROR 19884 --- [doctorcare] [restartedMain] c.d.d.config.ApplicationStartup          : Admin role created
-2024-10-15T09:47:05.652+07:00  INFO 19884 --- [doctorcare] [restartedMain] c.dut.doctorcare.DoctorCareApplication   : App is working!!
-2024-10-15T09:47:28.395+07:00  INFO 19884 --- [doctorcare] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 97 class path changes (0 additions, 93 deletions, 4 modifications)
-2024-10-15T09:47:28.703+07:00  INFO 19884 --- [doctorcare] [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-10-15T09:47:28.711+07:00  INFO 19884 --- [doctorcare] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-10-15T09:47:28.724+07:00  INFO 19884 --- [doctorcare] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2024-10-15T09:47:28.891+07:00  INFO 19884 --- [doctorcare] [restartedMain] c.dut.doctorcare.DoctorCareApplication   : Starting DoctorCareApplication using Java 17.0.12 with PID 19884 (D:\DATN\doctor-care\doctor-care\target\classes started by nguye in D:\DATN\doctor-care\doctor-care)
-2024-10-15T09:47:28.891+07:00  INFO 19884 --- [doctorcare] [restartedMain] c.dut.doctorcare.DoctorCareApplication   : The following 1 profile is active: "local"
-2024-10-15T09:47:29.698+07:00  INFO 19884 --- [doctorcare] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-10-15T09:47:29.701+07:00  INFO 19884 --- [doctorcare] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 0 JPA repository interfaces.
-2024-10-15T09:47:30.015+07:00  INFO 19884 --- [doctorcare] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2024-10-15T09:47:30.016+07:00  INFO 19884 --- [doctorcare] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-10-15T09:47:30.017+07:00  INFO 19884 --- [doctorcare] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
-2024-10-15T09:47:30.064+07:00  INFO 19884 --- [doctorcare] [restartedMain] o.a.c.c.C.[.[localhost].[/DoctorCare]    : Initializing Spring embedded WebApplicationContext
-2024-10-15T09:47:30.064+07:00  INFO 19884 --- [doctorcare] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1166 ms
-2024-10-15T09:47:30.508+07:00  INFO 19884 --- [doctorcare] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-10-15T09:47:30.539+07:00  INFO 19884 --- [doctorcare] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-10-15T09:47:30.612+07:00  INFO 19884 --- [doctorcare] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-10-15T09:47:30.616+07:00  INFO 19884 --- [doctorcare] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
-2024-10-15T09:47:30.670+07:00  INFO 19884 --- [doctorcare] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1b11ddc8
-2024-10-15T09:47:30.672+07:00  INFO 19884 --- [doctorcare] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
-2024-10-15T09:47:30.677+07:00  WARN 19884 --- [doctorcare] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-10-15T09:47:30.760+07:00  INFO 19884 --- [doctorcare] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-10-15T09:47:30.765+07:00  INFO 19884 --- [doctorcare] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-10-15T09:47:31.242+07:00  WARN 19884 --- [doctorcare] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-10-15T09:47:32.837+07:00  INFO 19884 --- [doctorcare] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
-2024-10-15T09:47:33.150+07:00  INFO 19884 --- [doctorcare] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2024-10-15T09:47:33.208+07:00  INFO 19884 --- [doctorcare] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/DoctorCare'
-2024-10-15T09:47:33.242+07:00  INFO 19884 --- [doctorcare] [restartedMain] c.dut.doctorcare.DoctorCareApplication   : Started DoctorCareApplication in 4.413 seconds (process running for 37.597)
-2024-10-15T09:47:33.254+07:00  INFO 19884 --- [doctorcare] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation delta:
+2024-10-16T01:49:27.923+07:00  INFO 2808 --- [doctorcare] [restartedMain] c.dut.doctorcare.DoctorCareApplication   : Starting DoctorCareApplication using Java 17.0.12 with PID 2808 (D:\DATN\doctor-care\doctor-care\target\classes started by nguye in D:\DATN\doctor-care\doctor-care)
+2024-10-16T01:49:27.932+07:00  INFO 2808 --- [doctorcare] [restartedMain] c.dut.doctorcare.DoctorCareApplication   : The following 1 profile is active: "local"
+2024-10-16T01:49:27.996+07:00  INFO 2808 --- [doctorcare] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-10-16T01:49:27.996+07:00  INFO 2808 --- [doctorcare] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-10-16T01:49:29.614+07:00  INFO 2808 --- [doctorcare] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-16T01:49:29.664+07:00  INFO 2808 --- [doctorcare] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 39 ms. Found 0 JPA repository interfaces.
+2024-10-16T01:49:30.537+07:00  INFO 2808 --- [doctorcare] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-10-16T01:49:30.555+07:00  INFO 2808 --- [doctorcare] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-10-16T01:49:30.555+07:00  INFO 2808 --- [doctorcare] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-16T01:49:30.615+07:00  INFO 2808 --- [doctorcare] [restartedMain] o.a.c.c.C.[.[localhost].[/DoctorCare]    : Initializing Spring embedded WebApplicationContext
+2024-10-16T01:49:30.615+07:00  INFO 2808 --- [doctorcare] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2618 ms
+2024-10-16T01:49:30.979+07:00  INFO 2808 --- [doctorcare] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-16T01:49:31.062+07:00  INFO 2808 --- [doctorcare] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-10-16T01:49:31.106+07:00  INFO 2808 --- [doctorcare] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-10-16T01:49:31.439+07:00  INFO 2808 --- [doctorcare] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-16T01:49:31.477+07:00  INFO 2808 --- [doctorcare] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-10-16T01:49:32.014+07:00  INFO 2808 --- [doctorcare] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@16423358
+2024-10-16T01:49:32.015+07:00  INFO 2808 --- [doctorcare] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-10-16T01:49:32.133+07:00  WARN 2808 --- [doctorcare] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-10-16T01:49:33.441+07:00  INFO 2808 --- [doctorcare] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-16T01:49:34.156+07:00  INFO 2808 --- [doctorcare] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-16T01:49:34.606+07:00  WARN 2808 --- [doctorcare] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-16T01:49:35.215+07:00  INFO 2808 --- [doctorcare] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2024-10-16T01:49:36.051+07:00  INFO 2808 --- [doctorcare] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-10-16T01:49:36.137+07:00  INFO 2808 --- [doctorcare] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/DoctorCare'
+2024-10-16T01:49:36.157+07:00  INFO 2808 --- [doctorcare] [restartedMain] c.dut.doctorcare.DoctorCareApplication   : Started DoctorCareApplication in 8.883 seconds (process running for 10.005)
+2024-10-16T01:49:36.382+07:00  INFO 2808 --- [doctorcare] [RMI TCP Connection(2)-192.168.31.55] o.a.c.c.C.[.[localhost].[/DoctorCare]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-10-16T01:49:36.382+07:00  INFO 2808 --- [doctorcare] [RMI TCP Connection(2)-192.168.31.55] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-10-16T01:49:36.385+07:00  INFO 2808 --- [doctorcare] [RMI TCP Connection(2)-192.168.31.55] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2024-10-16T01:49:36.673+07:00  INFO 2808 --- [doctorcare] [restartedMain] c.dut.doctorcare.DoctorCareApplication   : App is working!!
+2024-10-16T01:52:49.371+07:00  WARN 2808 --- [doctorcare] [http-nio-8080-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.dao.InvalidDataAccessApiUsageException: Argument [USER] of type [java.lang.String] did not match parameter type [com.dut.doctorcare.model.Role$RoleName (n/a)]]
+2024-10-16T02:06:22.906+07:00  INFO 2808 --- [doctorcare] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-16T02:06:22.969+07:00  INFO 2808 --- [doctorcare] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-10-16T02:06:23.037+07:00  INFO 2808 --- [doctorcare] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-10-16T02:13:00.868+07:00  INFO 21996 --- [doctorcare] [restartedMain] c.dut.doctorcare.DoctorCareApplication   : Starting DoctorCareApplication using Java 17.0.12 with PID 21996 (D:\DATN\doctor-care\doctor-care\target\classes started by nguye in D:\DATN\doctor-care\doctor-care)
+2024-10-16T02:13:00.870+07:00  INFO 21996 --- [doctorcare] [restartedMain] c.dut.doctorcare.DoctorCareApplication   : The following 1 profile is active: "local"
+2024-10-16T02:13:00.919+07:00  INFO 21996 --- [doctorcare] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-10-16T02:13:00.919+07:00  INFO 21996 --- [doctorcare] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-10-16T02:13:02.493+07:00  INFO 21996 --- [doctorcare] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-16T02:13:02.534+07:00  INFO 21996 --- [doctorcare] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 33 ms. Found 0 JPA repository interfaces.
+2024-10-16T02:13:03.491+07:00  INFO 21996 --- [doctorcare] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-10-16T02:13:03.507+07:00  INFO 21996 --- [doctorcare] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-10-16T02:13:03.507+07:00  INFO 21996 --- [doctorcare] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-16T02:13:03.583+07:00  INFO 21996 --- [doctorcare] [restartedMain] o.a.c.c.C.[.[localhost].[/DoctorCare]    : Initializing Spring embedded WebApplicationContext
+2024-10-16T02:13:03.583+07:00  INFO 21996 --- [doctorcare] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2664 ms
+2024-10-16T02:13:03.986+07:00  INFO 21996 --- [doctorcare] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-16T02:13:04.081+07:00  INFO 21996 --- [doctorcare] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-10-16T02:13:04.135+07:00  INFO 21996 --- [doctorcare] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-10-16T02:13:04.522+07:00  INFO 21996 --- [doctorcare] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-16T02:13:04.557+07:00  INFO 21996 --- [doctorcare] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-10-16T02:13:05.055+07:00  INFO 21996 --- [doctorcare] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@79e1627a
+2024-10-16T02:13:05.057+07:00  INFO 21996 --- [doctorcare] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-10-16T02:13:05.144+07:00  WARN 21996 --- [doctorcare] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-10-16T02:13:06.574+07:00  INFO 21996 --- [doctorcare] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-16T02:13:06.961+07:00  INFO 21996 --- [doctorcare] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-16T02:13:07.421+07:00  WARN 21996 --- [doctorcare] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-16T02:13:08.234+07:00  INFO 21996 --- [doctorcare] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2024-10-16T02:13:09.186+07:00  INFO 21996 --- [doctorcare] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-10-16T02:13:09.274+07:00  INFO 21996 --- [doctorcare] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/DoctorCare'
+2024-10-16T02:13:09.296+07:00  INFO 21996 --- [doctorcare] [restartedMain] c.dut.doctorcare.DoctorCareApplication   : Started DoctorCareApplication in 8.896 seconds (process running for 10.059)
+2024-10-16T02:13:09.724+07:00  INFO 21996 --- [doctorcare] [restartedMain] c.dut.doctorcare.DoctorCareApplication   : App is working!!
+2024-10-16T02:13:09.825+07:00  INFO 21996 --- [doctorcare] [RMI TCP Connection(2)-192.168.31.55] o.a.c.c.C.[.[localhost].[/DoctorCare]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-10-16T02:13:09.827+07:00  INFO 21996 --- [doctorcare] [RMI TCP Connection(2)-192.168.31.55] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-10-16T02:13:09.830+07:00  INFO 21996 --- [doctorcare] [RMI TCP Connection(2)-192.168.31.55] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2024-10-16T02:13:22.414+07:00  WARN 21996 --- [doctorcare] [http-nio-8080-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.dao.InvalidDataAccessApiUsageException: Argument [USER] of type [java.lang.String] did not match parameter type [com.dut.doctorcare.model.Role$RoleName (n/a)]]
+2024-10-16T02:23:46.121+07:00  INFO 21996 --- [doctorcare] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 4 class path changes (0 additions, 4 deletions, 0 modifications)
+2024-10-16T02:23:46.987+07:00  INFO 21996 --- [doctorcare] [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-16T02:23:47.169+07:00  INFO 21996 --- [doctorcare] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-10-16T02:23:47.387+07:00  INFO 21996 --- [doctorcare] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-10-16T02:23:48.148+07:00  INFO 21996 --- [doctorcare] [restartedMain] c.dut.doctorcare.DoctorCareApplication   : Starting DoctorCareApplication using Java 17.0.12 with PID 21996 (D:\DATN\doctor-care\doctor-care\target\classes started by nguye in D:\DATN\doctor-care\doctor-care)
+2024-10-16T02:23:48.148+07:00  INFO 21996 --- [doctorcare] [restartedMain] c.dut.doctorcare.DoctorCareApplication   : The following 1 profile is active: "local"
+2024-10-16T02:23:49.419+07:00  INFO 21996 --- [doctorcare] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-16T02:23:49.459+07:00  INFO 21996 --- [doctorcare] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 38 ms. Found 0 JPA repository interfaces.
+2024-10-16T02:23:50.190+07:00  INFO 21996 --- [doctorcare] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-10-16T02:23:50.191+07:00  INFO 21996 --- [doctorcare] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-10-16T02:23:50.191+07:00  INFO 21996 --- [doctorcare] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-16T02:23:50.211+07:00  INFO 21996 --- [doctorcare] [restartedMain] o.a.c.c.C.[.[localhost].[/DoctorCare]    : Initializing Spring embedded WebApplicationContext
+2024-10-16T02:23:50.211+07:00  INFO 21996 --- [doctorcare] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2060 ms
+2024-10-16T02:23:50.471+07:00  INFO 21996 --- [doctorcare] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-16T02:23:50.475+07:00  INFO 21996 --- [doctorcare] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-10-16T02:23:50.496+07:00  INFO 21996 --- [doctorcare] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-16T02:23:50.498+07:00  INFO 21996 --- [doctorcare] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2024-10-16T02:23:50.549+07:00  INFO 21996 --- [doctorcare] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@54245694
+2024-10-16T02:23:50.549+07:00  INFO 21996 --- [doctorcare] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2024-10-16T02:23:50.550+07:00  WARN 21996 --- [doctorcare] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-10-16T02:23:50.988+07:00  INFO 21996 --- [doctorcare] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-16T02:23:51.223+07:00  INFO 21996 --- [doctorcare] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-16T02:23:51.705+07:00  WARN 21996 --- [doctorcare] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-16T02:23:52.178+07:00  INFO 21996 --- [doctorcare] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2024-10-16T02:23:53.004+07:00  INFO 21996 --- [doctorcare] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-10-16T02:23:53.034+07:00  INFO 21996 --- [doctorcare] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/DoctorCare'
+2024-10-16T02:23:53.064+07:00  INFO 21996 --- [doctorcare] [restartedMain] c.dut.doctorcare.DoctorCareApplication   : Started DoctorCareApplication in 5.0 seconds (process running for 653.828)
+2024-10-16T02:23:53.069+07:00  INFO 21996 --- [doctorcare] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-10-16T02:23:53.084+07:00  INFO 21996 --- [doctorcare] [restartedMain] c.dut.doctorcare.DoctorCareApplication   : App is working!!
+2024-10-16T02:23:53.277+07:00  INFO 21996 --- [doctorcare] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-16T02:23:53.278+07:00  INFO 21996 --- [doctorcare] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2024-10-16T02:23:53.287+07:00  INFO 21996 --- [doctorcare] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2024-10-16T02:31:22.540+07:00  INFO 24316 --- [doctorcare] [restartedMain] c.dut.doctorcare.DoctorCareApplication   : Starting DoctorCareApplication using Java 17.0.12 with PID 24316 (D:\DATN\doctor-care\doctor-care\target\classes started by nguye in D:\DATN\doctor-care\doctor-care)
+2024-10-16T02:31:22.541+07:00  INFO 24316 --- [doctorcare] [restartedMain] c.dut.doctorcare.DoctorCareApplication   : The following 1 profile is active: "local"
+2024-10-16T02:31:22.579+07:00  INFO 24316 --- [doctorcare] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-10-16T02:31:22.579+07:00  INFO 24316 --- [doctorcare] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-10-16T02:31:23.819+07:00  INFO 24316 --- [doctorcare] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-16T02:31:23.858+07:00  INFO 24316 --- [doctorcare] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 32 ms. Found 0 JPA repository interfaces.
+2024-10-16T02:31:24.764+07:00  INFO 24316 --- [doctorcare] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-10-16T02:31:24.779+07:00  INFO 24316 --- [doctorcare] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-10-16T02:31:24.779+07:00  INFO 24316 --- [doctorcare] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-16T02:31:24.845+07:00  INFO 24316 --- [doctorcare] [restartedMain] o.a.c.c.C.[.[localhost].[/DoctorCare]    : Initializing Spring embedded WebApplicationContext
+2024-10-16T02:31:24.845+07:00  INFO 24316 --- [doctorcare] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2265 ms
+2024-10-16T02:31:25.197+07:00  INFO 24316 --- [doctorcare] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-16T02:31:25.272+07:00  INFO 24316 --- [doctorcare] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-10-16T02:31:25.313+07:00  INFO 24316 --- [doctorcare] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-10-16T02:31:25.705+07:00  INFO 24316 --- [doctorcare] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-16T02:31:25.747+07:00  INFO 24316 --- [doctorcare] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-10-16T02:31:26.212+07:00  INFO 24316 --- [doctorcare] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@16423358
+2024-10-16T02:31:26.215+07:00  INFO 24316 --- [doctorcare] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-10-16T02:31:26.292+07:00  WARN 24316 --- [doctorcare] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-10-16T02:31:27.551+07:00  INFO 24316 --- [doctorcare] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-16T02:31:27.885+07:00  INFO 24316 --- [doctorcare] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-16T02:31:28.225+07:00  WARN 24316 --- [doctorcare] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-16T02:31:28.834+07:00  INFO 24316 --- [doctorcare] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2024-10-16T02:31:29.617+07:00  INFO 24316 --- [doctorcare] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-10-16T02:31:29.706+07:00  INFO 24316 --- [doctorcare] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/DoctorCare'
+2024-10-16T02:31:29.724+07:00  INFO 24316 --- [doctorcare] [restartedMain] c.dut.doctorcare.DoctorCareApplication   : Started DoctorCareApplication in 7.697 seconds (process running for 8.647)
+2024-10-16T02:31:30.096+07:00  INFO 24316 --- [doctorcare] [RMI TCP Connection(3)-192.168.31.55] o.a.c.c.C.[.[localhost].[/DoctorCare]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-10-16T02:31:30.097+07:00  INFO 24316 --- [doctorcare] [RMI TCP Connection(3)-192.168.31.55] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-10-16T02:31:30.099+07:00  INFO 24316 --- [doctorcare] [RMI TCP Connection(3)-192.168.31.55] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-10-16T02:31:30.131+07:00  INFO 24316 --- [doctorcare] [restartedMain] c.dut.doctorcare.DoctorCareApplication   : App is working!!
+2024-10-16T02:32:21.881+07:00  WARN 24316 --- [doctorcare] [http-nio-8080-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.dao.InvalidDataAccessApiUsageException: Argument [USER] of type [java.lang.String] did not match parameter type [com.dut.doctorcare.model.Role$RoleName (n/a)]]
+2024-10-16T02:32:24.467+07:00  WARN 24316 --- [doctorcare] [http-nio-8080-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.dao.InvalidDataAccessApiUsageException: Argument [USER] of type [java.lang.String] did not match parameter type [com.dut.doctorcare.model.Role$RoleName (n/a)]]
+2024-10-16T02:36:06.191+07:00  INFO 24316 --- [doctorcare] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2024-10-16T02:36:06.447+07:00  INFO 24316 --- [doctorcare] [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-16T02:36:06.483+07:00  INFO 24316 --- [doctorcare] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-10-16T02:36:06.522+07:00  INFO 24316 --- [doctorcare] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-10-16T02:36:06.861+07:00  INFO 24316 --- [doctorcare] [restartedMain] c.dut.doctorcare.DoctorCareApplication   : Starting DoctorCareApplication using Java 17.0.12 with PID 24316 (D:\DATN\doctor-care\doctor-care\target\classes started by nguye in D:\DATN\doctor-care\doctor-care)
+2024-10-16T02:36:06.862+07:00  INFO 24316 --- [doctorcare] [restartedMain] c.dut.doctorcare.DoctorCareApplication   : The following 1 profile is active: "local"
+2024-10-16T02:36:08.003+07:00  INFO 24316 --- [doctorcare] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-16T02:36:08.042+07:00  INFO 24316 --- [doctorcare] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 38 ms. Found 0 JPA repository interfaces.
+2024-10-16T02:36:08.349+07:00  INFO 24316 --- [doctorcare] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-10-16T02:36:08.350+07:00  INFO 24316 --- [doctorcare] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-10-16T02:36:08.350+07:00  INFO 24316 --- [doctorcare] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-16T02:36:08.373+07:00  INFO 24316 --- [doctorcare] [restartedMain] o.a.c.c.C.[.[localhost].[/DoctorCare]    : Initializing Spring embedded WebApplicationContext
+2024-10-16T02:36:08.374+07:00  INFO 24316 --- [doctorcare] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1508 ms
+2024-10-16T02:36:08.615+07:00  INFO 24316 --- [doctorcare] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-16T02:36:08.619+07:00  INFO 24316 --- [doctorcare] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-10-16T02:36:08.629+07:00  INFO 24316 --- [doctorcare] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-16T02:36:08.630+07:00  INFO 24316 --- [doctorcare] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2024-10-16T02:36:08.656+07:00  INFO 24316 --- [doctorcare] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@65b07579
+2024-10-16T02:36:08.656+07:00  INFO 24316 --- [doctorcare] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2024-10-16T02:36:08.658+07:00  WARN 24316 --- [doctorcare] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-10-16T02:36:08.946+07:00  INFO 24316 --- [doctorcare] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-16T02:36:09.139+07:00  INFO 24316 --- [doctorcare] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-16T02:36:09.355+07:00  WARN 24316 --- [doctorcare] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-16T02:36:09.675+07:00  INFO 24316 --- [doctorcare] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2024-10-16T02:36:10.165+07:00  INFO 24316 --- [doctorcare] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-10-16T02:36:10.197+07:00  INFO 24316 --- [doctorcare] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/DoctorCare'
+2024-10-16T02:36:10.215+07:00  INFO 24316 --- [doctorcare] [restartedMain] c.dut.doctorcare.DoctorCareApplication   : Started DoctorCareApplication in 3.408 seconds (process running for 289.137)
+2024-10-16T02:36:10.219+07:00  INFO 24316 --- [doctorcare] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-10-16T02:36:10.231+07:00  INFO 24316 --- [doctorcare] [restartedMain] c.dut.doctorcare.DoctorCareApplication   : App is working!!
+2024-10-16T02:36:10.413+07:00  INFO 24316 --- [doctorcare] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-16T02:36:10.415+07:00  INFO 24316 --- [doctorcare] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2024-10-16T02:36:10.422+07:00  INFO 24316 --- [doctorcare] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2024-10-16T03:24:49.725+07:00  INFO 7288 --- [doctorcare] [restartedMain] c.dut.doctorcare.DoctorCareApplication   : Starting DoctorCareApplication using Java 17.0.12 with PID 7288 (D:\DATN\doctor-care\doctor-care\target\classes started by nguye in D:\DATN\doctor-care\doctor-care)
+2024-10-16T03:24:49.731+07:00  INFO 7288 --- [doctorcare] [restartedMain] c.dut.doctorcare.DoctorCareApplication   : The following 1 profile is active: "local"
+2024-10-16T03:24:49.796+07:00  INFO 7288 --- [doctorcare] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-10-16T03:24:49.798+07:00  INFO 7288 --- [doctorcare] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-10-16T03:24:51.601+07:00  INFO 7288 --- [doctorcare] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-16T03:24:51.651+07:00  INFO 7288 --- [doctorcare] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 40 ms. Found 0 JPA repository interfaces.
+2024-10-16T03:24:52.710+07:00  INFO 7288 --- [doctorcare] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-10-16T03:24:52.730+07:00  INFO 7288 --- [doctorcare] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-10-16T03:24:52.730+07:00  INFO 7288 --- [doctorcare] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-16T03:24:52.829+07:00  INFO 7288 --- [doctorcare] [restartedMain] o.a.c.c.C.[.[localhost].[/DoctorCare]    : Initializing Spring embedded WebApplicationContext
+2024-10-16T03:24:52.830+07:00  INFO 7288 --- [doctorcare] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3031 ms
+2024-10-16T03:24:53.622+07:00  INFO 7288 --- [doctorcare] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-16T03:24:53.802+07:00  INFO 7288 --- [doctorcare] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-10-16T03:24:53.894+07:00  INFO 7288 --- [doctorcare] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-10-16T03:24:54.727+07:00  INFO 7288 --- [doctorcare] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-16T03:24:54.833+07:00  INFO 7288 --- [doctorcare] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-10-16T03:24:55.865+07:00  INFO 7288 --- [doctorcare] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5937edaf
+2024-10-16T03:24:55.870+07:00  INFO 7288 --- [doctorcare] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-10-16T03:24:56.070+07:00  WARN 7288 --- [doctorcare] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-10-16T03:24:59.697+07:00  INFO 7288 --- [doctorcare] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-16T03:25:00.334+07:00  INFO 7288 --- [doctorcare] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-16T03:25:01.548+07:00  WARN 7288 --- [doctorcare] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-16T03:25:04.018+07:00  INFO 7288 --- [doctorcare] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2024-10-16T03:25:05.552+07:00  INFO 7288 --- [doctorcare] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-10-16T03:25:05.709+07:00  INFO 7288 --- [doctorcare] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/DoctorCare'
+2024-10-16T03:25:05.750+07:00  INFO 7288 --- [doctorcare] [restartedMain] c.dut.doctorcare.DoctorCareApplication   : Started DoctorCareApplication in 16.708 seconds (process running for 17.641)
+2024-10-16T03:25:06.591+07:00  INFO 7288 --- [doctorcare] [restartedMain] c.dut.doctorcare.DoctorCareApplication   : App is working!!
+2024-10-16T03:25:06.620+07:00  INFO 7288 --- [doctorcare] [RMI TCP Connection(1)-192.168.31.55] o.a.c.c.C.[.[localhost].[/DoctorCare]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-10-16T03:25:06.620+07:00  INFO 7288 --- [doctorcare] [RMI TCP Connection(1)-192.168.31.55] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-10-16T03:25:06.624+07:00  INFO 7288 --- [doctorcare] [RMI TCP Connection(1)-192.168.31.55] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2024-10-16T03:25:39.713+07:00  WARN 7288 --- [doctorcare] [http-nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.dao.InvalidDataAccessApiUsageException: Argument [USER] of type [java.lang.String] did not match parameter type [com.dut.doctorcare.model.Role$RoleName (n/a)]]
+2024-10-16T03:25:42.197+07:00  WARN 7288 --- [doctorcare] [http-nio-8080-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.dao.InvalidDataAccessApiUsageException: Argument [USER] of type [java.lang.String] did not match parameter type [com.dut.doctorcare.model.Role$RoleName (n/a)]]
+2024-10-16T03:25:43.770+07:00  WARN 7288 --- [doctorcare] [http-nio-8080-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.dao.InvalidDataAccessApiUsageException: Argument [USER] of type [java.lang.String] did not match parameter type [com.dut.doctorcare.model.Role$RoleName (n/a)]]
+2024-10-16T03:30:52.181+07:00  INFO 7288 --- [doctorcare] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2024-10-16T03:30:52.627+07:00  INFO 7288 --- [doctorcare] [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-16T03:30:52.673+07:00  INFO 7288 --- [doctorcare] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-10-16T03:30:52.748+07:00  INFO 7288 --- [doctorcare] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-10-16T03:30:53.323+07:00  INFO 7288 --- [doctorcare] [restartedMain] c.dut.doctorcare.DoctorCareApplication   : Starting DoctorCareApplication using Java 17.0.12 with PID 7288 (D:\DATN\doctor-care\doctor-care\target\classes started by nguye in D:\DATN\doctor-care\doctor-care)
+2024-10-16T03:30:53.323+07:00  INFO 7288 --- [doctorcare] [restartedMain] c.dut.doctorcare.DoctorCareApplication   : The following 1 profile is active: "local"
+2024-10-16T03:30:54.547+07:00  INFO 7288 --- [doctorcare] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-16T03:30:54.592+07:00  INFO 7288 --- [doctorcare] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 43 ms. Found 0 JPA repository interfaces.
+2024-10-16T03:30:55.076+07:00  INFO 7288 --- [doctorcare] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-10-16T03:30:55.078+07:00  INFO 7288 --- [doctorcare] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-10-16T03:30:55.079+07:00  INFO 7288 --- [doctorcare] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-16T03:30:55.128+07:00  INFO 7288 --- [doctorcare] [restartedMain] o.a.c.c.C.[.[localhost].[/DoctorCare]    : Initializing Spring embedded WebApplicationContext
+2024-10-16T03:30:55.128+07:00  INFO 7288 --- [doctorcare] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1797 ms
+2024-10-16T03:30:55.511+07:00  INFO 7288 --- [doctorcare] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-16T03:30:55.516+07:00  INFO 7288 --- [doctorcare] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-10-16T03:30:55.537+07:00  INFO 7288 --- [doctorcare] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-16T03:30:55.538+07:00  INFO 7288 --- [doctorcare] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2024-10-16T03:30:55.624+07:00  INFO 7288 --- [doctorcare] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@16e555cb
+2024-10-16T03:30:55.624+07:00  INFO 7288 --- [doctorcare] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2024-10-16T03:30:55.628+07:00  WARN 7288 --- [doctorcare] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-10-16T03:30:56.150+07:00  INFO 7288 --- [doctorcare] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-16T03:30:56.472+07:00  INFO 7288 --- [doctorcare] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-16T03:30:56.728+07:00  WARN 7288 --- [doctorcare] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userController' defined in file [D:\DATN\doctor-care\doctor-care\target\classes\com\dut\doctorcare\controller\UserController.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'com.dut.doctorcare.service.iface.UserService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2024-10-16T03:30:56.729+07:00  INFO 7288 --- [doctorcare] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-16T03:30:56.730+07:00  INFO 7288 --- [doctorcare] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2024-10-16T03:30:56.736+07:00  INFO 7288 --- [doctorcare] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2024-10-16T03:34:35.053+07:00  INFO 3464 --- [doctorcare] [restartedMain] c.dut.doctorcare.DoctorCareApplication   : Starting DoctorCareApplication using Java 17.0.12 with PID 3464 (D:\DATN\doctor-care\doctor-care\target\classes started by nguye in D:\DATN\doctor-care\doctor-care)
+2024-10-16T03:34:35.057+07:00  INFO 3464 --- [doctorcare] [restartedMain] c.dut.doctorcare.DoctorCareApplication   : The following 1 profile is active: "local"
+2024-10-16T03:34:35.127+07:00  INFO 3464 --- [doctorcare] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-10-16T03:34:35.127+07:00  INFO 3464 --- [doctorcare] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-10-16T03:34:36.845+07:00  INFO 3464 --- [doctorcare] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-16T03:34:36.891+07:00  INFO 3464 --- [doctorcare] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 37 ms. Found 0 JPA repository interfaces.
+2024-10-16T03:34:37.918+07:00  INFO 3464 --- [doctorcare] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-10-16T03:34:37.934+07:00  INFO 3464 --- [doctorcare] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-10-16T03:34:37.934+07:00  INFO 3464 --- [doctorcare] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-16T03:34:38.011+07:00  INFO 3464 --- [doctorcare] [restartedMain] o.a.c.c.C.[.[localhost].[/DoctorCare]    : Initializing Spring embedded WebApplicationContext
+2024-10-16T03:34:38.011+07:00  INFO 3464 --- [doctorcare] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2883 ms
+2024-10-16T03:34:38.435+07:00  INFO 3464 --- [doctorcare] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-16T03:34:38.516+07:00  INFO 3464 --- [doctorcare] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-10-16T03:34:38.559+07:00  INFO 3464 --- [doctorcare] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-10-16T03:34:38.931+07:00  INFO 3464 --- [doctorcare] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-16T03:34:38.964+07:00  INFO 3464 --- [doctorcare] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-10-16T03:34:39.357+07:00  INFO 3464 --- [doctorcare] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5a8e694c
+2024-10-16T03:34:39.359+07:00  INFO 3464 --- [doctorcare] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-10-16T03:34:39.429+07:00  WARN 3464 --- [doctorcare] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-10-16T03:34:42.277+07:00  INFO 3464 --- [doctorcare] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-16T03:34:42.613+07:00  INFO 3464 --- [doctorcare] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-16T03:34:43.059+07:00  WARN 3464 --- [doctorcare] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-16T03:34:44.313+07:00  INFO 3464 --- [doctorcare] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2024-10-16T03:34:45.474+07:00  INFO 3464 --- [doctorcare] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-10-16T03:34:45.600+07:00  INFO 3464 --- [doctorcare] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/DoctorCare'
+2024-10-16T03:34:45.623+07:00  INFO 3464 --- [doctorcare] [restartedMain] c.dut.doctorcare.DoctorCareApplication   : Started DoctorCareApplication in 11.263 seconds (process running for 12.327)
+2024-10-16T03:34:46.059+07:00  INFO 3464 --- [doctorcare] [RMI TCP Connection(2)-192.168.31.55] o.a.c.c.C.[.[localhost].[/DoctorCare]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-10-16T03:34:46.059+07:00  INFO 3464 --- [doctorcare] [RMI TCP Connection(2)-192.168.31.55] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-10-16T03:34:46.062+07:00  INFO 3464 --- [doctorcare] [RMI TCP Connection(2)-192.168.31.55] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2024-10-16T03:34:46.174+07:00  INFO 3464 --- [doctorcare] [restartedMain] c.dut.doctorcare.DoctorCareApplication   : App is working!!
+2024-10-16T03:34:54.331+07:00  WARN 3464 --- [doctorcare] [http-nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.dao.InvalidDataAccessApiUsageException: Argument [USER] of type [java.lang.String] did not match parameter type [com.dut.doctorcare.model.Role$RoleName (n/a)]]
+2024-10-16T03:38:31.359+07:00  INFO 3464 --- [doctorcare] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2024-10-16T03:38:31.676+07:00  INFO 3464 --- [doctorcare] [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-16T03:38:31.685+07:00  INFO 3464 --- [doctorcare] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-10-16T03:38:31.704+07:00  INFO 3464 --- [doctorcare] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-10-16T03:38:31.876+07:00  INFO 3464 --- [doctorcare] [restartedMain] c.dut.doctorcare.DoctorCareApplication   : Starting DoctorCareApplication using Java 17.0.12 with PID 3464 (D:\DATN\doctor-care\doctor-care\target\classes started by nguye in D:\DATN\doctor-care\doctor-care)
+2024-10-16T03:38:31.878+07:00  INFO 3464 --- [doctorcare] [restartedMain] c.dut.doctorcare.DoctorCareApplication   : The following 1 profile is active: "local"
+2024-10-16T03:38:32.925+07:00  INFO 3464 --- [doctorcare] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-16T03:38:32.953+07:00  INFO 3464 --- [doctorcare] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 28 ms. Found 0 JPA repository interfaces.
+2024-10-16T03:38:33.250+07:00  INFO 3464 --- [doctorcare] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-10-16T03:38:33.251+07:00  INFO 3464 --- [doctorcare] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-10-16T03:38:33.252+07:00  INFO 3464 --- [doctorcare] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-16T03:38:33.282+07:00  INFO 3464 --- [doctorcare] [restartedMain] o.a.c.c.C.[.[localhost].[/DoctorCare]    : Initializing Spring embedded WebApplicationContext
+2024-10-16T03:38:33.282+07:00  INFO 3464 --- [doctorcare] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1400 ms
+2024-10-16T03:38:33.546+07:00  INFO 3464 --- [doctorcare] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-16T03:38:33.552+07:00  INFO 3464 --- [doctorcare] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-10-16T03:38:33.577+07:00  INFO 3464 --- [doctorcare] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-16T03:38:33.578+07:00  INFO 3464 --- [doctorcare] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2024-10-16T03:38:33.604+07:00  INFO 3464 --- [doctorcare] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@58183d36
+2024-10-16T03:38:33.604+07:00  INFO 3464 --- [doctorcare] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2024-10-16T03:38:33.608+07:00  WARN 3464 --- [doctorcare] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-10-16T03:38:34.087+07:00  INFO 3464 --- [doctorcare] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-16T03:38:34.357+07:00  INFO 3464 --- [doctorcare] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-16T03:38:34.424+07:00  WARN 3464 --- [doctorcare] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'applicationStartup': Unsatisfied dependency expressed through field 'roleDao': No qualifying bean of type 'com.dut.doctorcare.dao.iface.RoleDao' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2024-10-16T03:38:34.425+07:00  INFO 3464 --- [doctorcare] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-16T03:38:34.425+07:00  INFO 3464 --- [doctorcare] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2024-10-16T03:38:34.430+07:00  INFO 3464 --- [doctorcare] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2024-10-16T03:38:34.430+07:00  INFO 3464 --- [doctorcare] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-10-16T03:38:34.456+07:00  INFO 3464 --- [doctorcare] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-10-16T03:38:34.514+07:00 ERROR 3464 --- [doctorcare] [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field roleDao in com.dut.doctorcare.config.ApplicationStartup required a bean of type 'com.dut.doctorcare.dao.iface.RoleDao' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
 
 
-==========================
-CONDITION EVALUATION DELTA
-==========================
+Action:
+
+Consider defining a bean of type 'com.dut.doctorcare.dao.iface.RoleDao' in your configuration.
+
+2024-10-16T03:38:36.068+07:00  INFO 3464 --- [doctorcare] [restartedMain] c.dut.doctorcare.DoctorCareApplication   : Starting DoctorCareApplication using Java 17.0.12 with PID 3464 (D:\DATN\doctor-care\doctor-care\target\classes started by nguye in D:\DATN\doctor-care\doctor-care)
+2024-10-16T03:38:36.068+07:00  INFO 3464 --- [doctorcare] [restartedMain] c.dut.doctorcare.DoctorCareApplication   : The following 1 profile is active: "local"
+2024-10-16T03:38:36.710+07:00  INFO 3464 --- [doctorcare] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-16T03:38:36.743+07:00  INFO 3464 --- [doctorcare] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 32 ms. Found 0 JPA repository interfaces.
+2024-10-16T03:38:37.002+07:00  INFO 3464 --- [doctorcare] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-10-16T03:38:37.005+07:00  INFO 3464 --- [doctorcare] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-10-16T03:38:37.005+07:00  INFO 3464 --- [doctorcare] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-16T03:38:37.036+07:00  INFO 3464 --- [doctorcare] [restartedMain] o.a.c.c.C.[.[localhost].[/DoctorCare]    : Initializing Spring embedded WebApplicationContext
+2024-10-16T03:38:37.037+07:00  INFO 3464 --- [doctorcare] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 967 ms
+2024-10-16T03:38:37.319+07:00  INFO 3464 --- [doctorcare] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-16T03:38:37.323+07:00  INFO 3464 --- [doctorcare] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-10-16T03:38:37.334+07:00  INFO 3464 --- [doctorcare] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-16T03:38:37.335+07:00  INFO 3464 --- [doctorcare] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2024-10-16T03:38:37.352+07:00  INFO 3464 --- [doctorcare] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2a8a8747
+2024-10-16T03:38:37.353+07:00  INFO 3464 --- [doctorcare] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2024-10-16T03:38:37.354+07:00  WARN 3464 --- [doctorcare] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-10-16T03:38:37.698+07:00  INFO 3464 --- [doctorcare] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-16T03:38:37.915+07:00  INFO 3464 --- [doctorcare] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-16T03:38:38.218+07:00  WARN 3464 --- [doctorcare] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-16T03:38:38.752+07:00  INFO 3464 --- [doctorcare] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2024-10-16T03:38:39.587+07:00  INFO 3464 --- [doctorcare] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-10-16T03:38:39.625+07:00  INFO 3464 --- [doctorcare] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/DoctorCare'
+2024-10-16T03:38:39.650+07:00  INFO 3464 --- [doctorcare] [restartedMain] c.dut.doctorcare.DoctorCareApplication   : Started DoctorCareApplication in 3.631 seconds (process running for 246.354)
+2024-10-16T03:38:39.654+07:00  INFO 3464 --- [doctorcare] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-10-16T03:38:39.664+07:00  INFO 3464 --- [doctorcare] [restartedMain] c.dut.doctorcare.DoctorCareApplication   : App is working!!
+2024-10-16T03:39:04.985+07:00  INFO 3464 --- [doctorcare] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2024-10-16T03:39:05.541+07:00  INFO 3464 --- [doctorcare] [Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-16T03:39:05.543+07:00  INFO 3464 --- [doctorcare] [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2024-10-16T03:39:05.554+07:00  INFO 3464 --- [doctorcare] [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2024-10-16T03:39:05.708+07:00  INFO 3464 --- [doctorcare] [restartedMain] c.dut.doctorcare.DoctorCareApplication   : Starting DoctorCareApplication using Java 17.0.12 with PID 3464 (D:\DATN\doctor-care\doctor-care\target\classes started by nguye in D:\DATN\doctor-care\doctor-care)
+2024-10-16T03:39:05.709+07:00  INFO 3464 --- [doctorcare] [restartedMain] c.dut.doctorcare.DoctorCareApplication   : The following 1 profile is active: "local"
+2024-10-16T03:39:06.872+07:00  INFO 3464 --- [doctorcare] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-16T03:39:06.965+07:00  INFO 3464 --- [doctorcare] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 92 ms. Found 0 JPA repository interfaces.
+2024-10-16T03:39:07.694+07:00  INFO 3464 --- [doctorcare] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-10-16T03:39:07.695+07:00  INFO 3464 --- [doctorcare] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-10-16T03:39:07.696+07:00  INFO 3464 --- [doctorcare] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-16T03:39:07.728+07:00  INFO 3464 --- [doctorcare] [restartedMain] o.a.c.c.C.[.[localhost].[/DoctorCare]    : Initializing Spring embedded WebApplicationContext
+2024-10-16T03:39:07.728+07:00  INFO 3464 --- [doctorcare] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2016 ms
+2024-10-16T03:39:08.122+07:00  INFO 3464 --- [doctorcare] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-16T03:39:08.128+07:00  INFO 3464 --- [doctorcare] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-10-16T03:39:08.180+07:00  INFO 3464 --- [doctorcare] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-16T03:39:08.183+07:00  INFO 3464 --- [doctorcare] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2024-10-16T03:39:08.223+07:00  INFO 3464 --- [doctorcare] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Added connection com.mysql.cj.jdbc.ConnectionImpl@736b9671
+2024-10-16T03:39:08.223+07:00  INFO 3464 --- [doctorcare] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2024-10-16T03:39:08.225+07:00  WARN 3464 --- [doctorcare] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-10-16T03:39:08.810+07:00  INFO 3464 --- [doctorcare] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-16T03:39:09.262+07:00  INFO 3464 --- [doctorcare] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-16T03:39:09.718+07:00  WARN 3464 --- [doctorcare] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'applicationStartup': Unsatisfied dependency expressed through field 'roleDao': No qualifying bean of type 'com.dut.doctorcare.dao.iface.RoleDao' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2024-10-16T03:39:09.720+07:00  INFO 3464 --- [doctorcare] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-16T03:39:09.722+07:00  INFO 3464 --- [doctorcare] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2024-10-16T03:39:09.740+07:00  INFO 3464 --- [doctorcare] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2024-10-16T03:39:09.741+07:00  INFO 3464 --- [doctorcare] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-10-16T03:39:09.805+07:00  INFO 3464 --- [doctorcare] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-10-16T03:39:09.870+07:00 ERROR 3464 --- [doctorcare] [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field roleDao in com.dut.doctorcare.config.ApplicationStartup required a bean of type 'com.dut.doctorcare.dao.iface.RoleDao' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
 
 
-Positive matches:
------------------
+Action:
 
-   ManagementWebSecurityAutoConfiguration matched:
-      - found 'session' scope (OnWebApplicationCondition)
-      - AllNestedConditions 2 matched 0 did not; NestedCondition on DefaultWebSecurityCondition.Beans @ConditionalOnMissingBean (types: org.springframework.security.web.SecurityFilterChain; SearchStrategy: all) did not find any beans; NestedCondition on DefaultWebSecurityCondition.Classes @ConditionalOnClass found required classes 'org.springframework.security.web.SecurityFilterChain', 'org.springframework.security.config.annotation.web.builders.HttpSecurity' (DefaultWebSecurityCondition)
+Consider defining a bean of type 'com.dut.doctorcare.dao.iface.RoleDao' in your configuration.
 
-   OAuth2ResourceServerJwtConfiguration.JwtDecoderConfiguration matched:
-      - @ConditionalOnMissingBean (types: org.springframework.security.oauth2.jwt.JwtDecoder; SearchStrategy: all) did not find any beans (OnBeanCondition)
+2024-10-16T03:43:35.199+07:00  INFO 25608 --- [doctorcare] [restartedMain] c.dut.doctorcare.DoctorCareApplication   : Starting DoctorCareApplication using Java 17.0.12 with PID 25608 (D:\DATN\doctor-care\doctor-care\target\classes started by nguye in D:\DATN\doctor-care\doctor-care)
+2024-10-16T03:43:35.202+07:00  INFO 25608 --- [doctorcare] [restartedMain] c.dut.doctorcare.DoctorCareApplication   : The following 1 profile is active: "local"
+2024-10-16T03:43:35.248+07:00  INFO 25608 --- [doctorcare] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-10-16T03:43:35.248+07:00  INFO 25608 --- [doctorcare] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-10-16T03:43:36.649+07:00  INFO 25608 --- [doctorcare] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-16T03:43:36.687+07:00  INFO 25608 --- [doctorcare] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 29 ms. Found 0 JPA repository interfaces.
+2024-10-16T03:43:37.615+07:00  INFO 25608 --- [doctorcare] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-10-16T03:43:37.635+07:00  INFO 25608 --- [doctorcare] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-10-16T03:43:37.636+07:00  INFO 25608 --- [doctorcare] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-16T03:43:37.745+07:00  INFO 25608 --- [doctorcare] [restartedMain] o.a.c.c.C.[.[localhost].[/DoctorCare]    : Initializing Spring embedded WebApplicationContext
+2024-10-16T03:43:37.746+07:00  INFO 25608 --- [doctorcare] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2497 ms
+2024-10-16T03:43:38.237+07:00  INFO 25608 --- [doctorcare] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-16T03:43:38.306+07:00  INFO 25608 --- [doctorcare] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-10-16T03:43:38.348+07:00  INFO 25608 --- [doctorcare] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-10-16T03:43:38.779+07:00  INFO 25608 --- [doctorcare] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-16T03:43:38.812+07:00  INFO 25608 --- [doctorcare] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-10-16T03:43:39.201+07:00  INFO 25608 --- [doctorcare] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@239267bf
+2024-10-16T03:43:39.202+07:00  INFO 25608 --- [doctorcare] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-10-16T03:43:39.272+07:00  WARN 25608 --- [doctorcare] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-10-16T03:43:40.526+07:00  INFO 25608 --- [doctorcare] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-16T03:43:40.789+07:00  INFO 25608 --- [doctorcare] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-16T03:43:41.205+07:00  WARN 25608 --- [doctorcare] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-16T03:43:41.867+07:00  INFO 25608 --- [doctorcare] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2024-10-16T03:43:42.715+07:00  INFO 25608 --- [doctorcare] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-10-16T03:43:42.805+07:00  INFO 25608 --- [doctorcare] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/DoctorCare'
+2024-10-16T03:43:42.826+07:00  INFO 25608 --- [doctorcare] [restartedMain] c.dut.doctorcare.DoctorCareApplication   : Started DoctorCareApplication in 8.098 seconds (process running for 9.064)
+2024-10-16T03:43:43.250+07:00  INFO 25608 --- [doctorcare] [restartedMain] c.dut.doctorcare.DoctorCareApplication   : App is working!!
+2024-10-16T03:43:43.369+07:00  INFO 25608 --- [doctorcare] [RMI TCP Connection(2)-192.168.31.55] o.a.c.c.C.[.[localhost].[/DoctorCare]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-10-16T03:43:43.369+07:00  INFO 25608 --- [doctorcare] [RMI TCP Connection(2)-192.168.31.55] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-10-16T03:43:43.371+07:00  INFO 25608 --- [doctorcare] [RMI TCP Connection(2)-192.168.31.55] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-10-16T03:44:46.241+07:00  INFO 25608 --- [doctorcare] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2024-10-16T03:44:46.423+07:00  INFO 25608 --- [doctorcare] [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-16T03:44:46.430+07:00  INFO 25608 --- [doctorcare] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-10-16T03:44:46.443+07:00  INFO 25608 --- [doctorcare] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-10-16T03:44:46.569+07:00  INFO 25608 --- [doctorcare] [restartedMain] c.dut.doctorcare.DoctorCareApplication   : Starting DoctorCareApplication using Java 17.0.12 with PID 25608 (D:\DATN\doctor-care\doctor-care\target\classes started by nguye in D:\DATN\doctor-care\doctor-care)
+2024-10-16T03:44:46.570+07:00  INFO 25608 --- [doctorcare] [restartedMain] c.dut.doctorcare.DoctorCareApplication   : The following 1 profile is active: "local"
+2024-10-16T03:44:47.353+07:00  INFO 25608 --- [doctorcare] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-16T03:44:47.389+07:00  INFO 25608 --- [doctorcare] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 35 ms. Found 0 JPA repository interfaces.
+2024-10-16T03:44:47.625+07:00  INFO 25608 --- [doctorcare] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-10-16T03:44:47.625+07:00  INFO 25608 --- [doctorcare] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-10-16T03:44:47.625+07:00  INFO 25608 --- [doctorcare] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-16T03:44:47.648+07:00  INFO 25608 --- [doctorcare] [restartedMain] o.a.c.c.C.[.[localhost].[/DoctorCare]    : Initializing Spring embedded WebApplicationContext
+2024-10-16T03:44:47.648+07:00  INFO 25608 --- [doctorcare] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1077 ms
+2024-10-16T03:44:47.870+07:00  INFO 25608 --- [doctorcare] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-16T03:44:47.873+07:00  INFO 25608 --- [doctorcare] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-10-16T03:44:47.889+07:00  INFO 25608 --- [doctorcare] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-16T03:44:47.891+07:00  INFO 25608 --- [doctorcare] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2024-10-16T03:44:47.905+07:00  INFO 25608 --- [doctorcare] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@192c1283
+2024-10-16T03:44:47.905+07:00  INFO 25608 --- [doctorcare] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2024-10-16T03:44:47.906+07:00  WARN 25608 --- [doctorcare] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-10-16T03:44:48.194+07:00  INFO 25608 --- [doctorcare] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-16T03:44:48.354+07:00  INFO 25608 --- [doctorcare] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-16T03:44:48.446+07:00  WARN 25608 --- [doctorcare] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userController' defined in file [D:\DATN\doctor-care\doctor-care\target\classes\com\dut\doctorcare\controller\UserController.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'com.dut.doctorcare.service.iface.UserService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2024-10-16T03:44:48.446+07:00  INFO 25608 --- [doctorcare] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-16T03:44:48.446+07:00  INFO 25608 --- [doctorcare] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2024-10-16T03:44:48.470+07:00  INFO 25608 --- [doctorcare] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2024-10-16T03:44:48.470+07:00  INFO 25608 --- [doctorcare] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-10-16T03:44:48.485+07:00  INFO 25608 --- [doctorcare] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
 
-   OAuth2ResourceServerJwtConfiguration.OAuth2SecurityFilterChainConfiguration matched:
-      - AllNestedConditions 2 matched 0 did not; NestedCondition on DefaultWebSecurityCondition.Beans @ConditionalOnMissingBean (types: org.springframework.security.web.SecurityFilterChain; SearchStrategy: all) did not find any beans; NestedCondition on DefaultWebSecurityCondition.Classes @ConditionalOnClass found required classes 'org.springframework.security.web.SecurityFilterChain', 'org.springframework.security.config.annotation.web.builders.HttpSecurity' (DefaultWebSecurityCondition)
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-10-16T03:44:48.511+07:00 ERROR 25608 --- [doctorcare] [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
 
-   OAuth2ResourceServerOpaqueTokenConfiguration.OAuth2SecurityFilterChainConfiguration matched:
-      - AllNestedConditions 2 matched 0 did not; NestedCondition on DefaultWebSecurityCondition.Beans @ConditionalOnMissingBean (types: org.springframework.security.web.SecurityFilterChain; SearchStrategy: all) did not find any beans; NestedCondition on DefaultWebSecurityCondition.Classes @ConditionalOnClass found required classes 'org.springframework.security.web.SecurityFilterChain', 'org.springframework.security.config.annotation.web.builders.HttpSecurity' (DefaultWebSecurityCondition)
+***************************
+APPLICATION FAILED TO START
+***************************
 
-   SpringBootWebSecurityConfiguration.WebSecurityEnablerConfiguration matched:
-      - @ConditionalOnClass found required class 'org.springframework.security.config.annotation.web.configuration.EnableWebSecurity' (OnClassCondition)
-      - @ConditionalOnMissingBean (names: springSecurityFilterChain; SearchStrategy: all) did not find any beans (OnBeanCondition)
+Description:
 
+Parameter 0 of constructor in com.dut.doctorcare.controller.UserController required a bean of type 'com.dut.doctorcare.service.iface.UserService' that could not be found.
 
-Negative matches:
------------------
-
-   OAuth2ResourceServerJwtConfiguration.JwtDecoderConfiguration#jwtDecoderByIssuerUri:
-      Did not match:
-         - OpenID Connect Issuer URI Condition did not find issuer-uri property (IssuerUriCondition)
-
-   OAuth2ResourceServerJwtConfiguration.JwtDecoderConfiguration#jwtDecoderByJwkKeySetUri:
-      Did not match:
-         - @ConditionalOnProperty (spring.security.oauth2.resourceserver.jwt.jwk-set-uri) did not find property 'spring.security.oauth2.resourceserver.jwt.jwk-set-uri' (OnPropertyCondition)
-
-   OAuth2ResourceServerJwtConfiguration.JwtDecoderConfiguration#jwtDecoderByPublicKeyValue:
-      Did not match:
-         - Public Key Value Condition did not find public-key-location property (KeyValueCondition)
-
-   OAuth2ResourceServerJwtConfiguration.OAuth2SecurityFilterChainConfiguration#jwtSecurityFilterChain:
-      Did not match:
-         - @ConditionalOnBean (types: org.springframework.security.oauth2.jwt.JwtDecoder; SearchStrategy: all) did not find any beans of type org.springframework.security.oauth2.jwt.JwtDecoder (OnBeanCondition)
-
-   OAuth2ResourceServerOpaqueTokenConfiguration.OAuth2SecurityFilterChainConfiguration#opaqueTokenSecurityFilterChain:
-      Did not match:
-         - @ConditionalOnBean (types: org.springframework.security.oauth2.server.resource.introspection.OpaqueTokenIntrospector; SearchStrategy: all) did not find any beans of type org.springframework.security.oauth2.server.resource.introspection.OpaqueTokenIntrospector (OnBeanCondition)
-
-
-Exclusions:
------------
-
-    None
-
-
-Unconditional classes:
-----------------------
-
-    None
-
-
-
-2024-10-15T09:47:33.254+07:00  INFO 19884 --- [doctorcare] [restartedMain] c.dut.doctorcare.DoctorCareApplication   : App is working!!
-2024-10-15T09:47:37.934+07:00  INFO 19884 --- [doctorcare] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 93 class path changes (93 additions, 0 deletions, 0 modifications)
-2024-10-15T09:47:38.224+07:00  INFO 19884 --- [doctorcare] [Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-10-15T09:47:38.234+07:00  INFO 19884 --- [doctorcare] [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
-2024-10-15T09:47:38.242+07:00  INFO 19884 --- [doctorcare] [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
-2024-10-15T09:47:38.359+07:00  INFO 19884 --- [doctorcare] [restartedMain] c.dut.doctorcare.DoctorCareApplication   : Starting DoctorCareApplication using Java 17.0.12 with PID 19884 (D:\DATN\doctor-care\doctor-care\target\classes started by nguye in D:\DATN\doctor-care\doctor-care)
-2024-10-15T09:47:38.359+07:00  INFO 19884 --- [doctorcare] [restartedMain] c.dut.doctorcare.DoctorCareApplication   : The following 1 profile is active: "local"
-2024-10-15T09:47:39.465+07:00  INFO 19884 --- [doctorcare] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-10-15T09:47:39.571+07:00  INFO 19884 --- [doctorcare] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 113 ms. Found 0 JPA repository interfaces.
-2024-10-15T09:47:40.109+07:00  INFO 19884 --- [doctorcare] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2024-10-15T09:47:40.109+07:00  INFO 19884 --- [doctorcare] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-10-15T09:47:40.109+07:00  INFO 19884 --- [doctorcare] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
-2024-10-15T09:47:40.163+07:00  INFO 19884 --- [doctorcare] [restartedMain] o.a.c.c.C.[.[localhost].[/DoctorCare]    : Initializing Spring embedded WebApplicationContext
-2024-10-15T09:47:40.163+07:00  INFO 19884 --- [doctorcare] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1796 ms
-2024-10-15T09:47:40.634+07:00  INFO 19884 --- [doctorcare] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-10-15T09:47:40.642+07:00  INFO 19884 --- [doctorcare] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-10-15T09:47:40.659+07:00  INFO 19884 --- [doctorcare] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-10-15T09:47:40.659+07:00  INFO 19884 --- [doctorcare] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
-2024-10-15T09:47:40.698+07:00  INFO 19884 --- [doctorcare] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4e88c576
-2024-10-15T09:47:40.698+07:00  INFO 19884 --- [doctorcare] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
-2024-10-15T09:47:40.701+07:00  WARN 19884 --- [doctorcare] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-10-15T09:47:41.305+07:00  INFO 19884 --- [doctorcare] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-10-15T09:47:41.749+07:00  INFO 19884 --- [doctorcare] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-10-15T09:47:42.200+07:00  WARN 19884 --- [doctorcare] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-10-15T09:47:43.121+07:00  INFO 19884 --- [doctorcare] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
-2024-10-15T09:47:44.115+07:00  INFO 19884 --- [doctorcare] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2024-10-15T09:47:44.153+07:00  INFO 19884 --- [doctorcare] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/DoctorCare'
-2024-10-15T09:47:44.182+07:00  INFO 19884 --- [doctorcare] [restartedMain] c.dut.doctorcare.DoctorCareApplication   : Started DoctorCareApplication in 5.862 seconds (process running for 48.537)
-2024-10-15T09:47:44.185+07:00  INFO 19884 --- [doctorcare] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation delta:
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
 
 
-==========================
-CONDITION EVALUATION DELTA
-==========================
+Action:
+
+Consider defining a bean of type 'com.dut.doctorcare.service.iface.UserService' in your configuration.
+
+2024-10-16T03:44:50.013+07:00  INFO 25608 --- [doctorcare] [restartedMain] c.dut.doctorcare.DoctorCareApplication   : Starting DoctorCareApplication using Java 17.0.12 with PID 25608 (D:\DATN\doctor-care\doctor-care\target\classes started by nguye in D:\DATN\doctor-care\doctor-care)
+2024-10-16T03:44:50.014+07:00  INFO 25608 --- [doctorcare] [restartedMain] c.dut.doctorcare.DoctorCareApplication   : The following 1 profile is active: "local"
+2024-10-16T03:44:50.534+07:00  INFO 25608 --- [doctorcare] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-16T03:44:50.557+07:00  INFO 25608 --- [doctorcare] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 23 ms. Found 0 JPA repository interfaces.
+2024-10-16T03:44:50.798+07:00  INFO 25608 --- [doctorcare] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-10-16T03:44:50.799+07:00  INFO 25608 --- [doctorcare] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-10-16T03:44:50.800+07:00  INFO 25608 --- [doctorcare] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-16T03:44:50.838+07:00  INFO 25608 --- [doctorcare] [restartedMain] o.a.c.c.C.[.[localhost].[/DoctorCare]    : Initializing Spring embedded WebApplicationContext
+2024-10-16T03:44:50.838+07:00  INFO 25608 --- [doctorcare] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 821 ms
+2024-10-16T03:44:51.133+07:00  INFO 25608 --- [doctorcare] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-16T03:44:51.138+07:00  INFO 25608 --- [doctorcare] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-10-16T03:44:51.148+07:00  INFO 25608 --- [doctorcare] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-16T03:44:51.150+07:00  INFO 25608 --- [doctorcare] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2024-10-16T03:44:51.166+07:00  INFO 25608 --- [doctorcare] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@736c17e9
+2024-10-16T03:44:51.166+07:00  INFO 25608 --- [doctorcare] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2024-10-16T03:44:51.170+07:00  WARN 25608 --- [doctorcare] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-10-16T03:44:51.469+07:00  INFO 25608 --- [doctorcare] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-16T03:44:51.627+07:00  INFO 25608 --- [doctorcare] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-16T03:44:51.920+07:00  WARN 25608 --- [doctorcare] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-16T03:44:52.388+07:00  INFO 25608 --- [doctorcare] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2024-10-16T03:44:53.084+07:00  INFO 25608 --- [doctorcare] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-10-16T03:44:53.120+07:00  INFO 25608 --- [doctorcare] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/DoctorCare'
+2024-10-16T03:44:53.139+07:00  INFO 25608 --- [doctorcare] [restartedMain] c.dut.doctorcare.DoctorCareApplication   : Started DoctorCareApplication in 3.157 seconds (process running for 79.376)
+2024-10-16T03:44:53.143+07:00  INFO 25608 --- [doctorcare] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-10-16T03:44:53.152+07:00  INFO 25608 --- [doctorcare] [restartedMain] c.dut.doctorcare.DoctorCareApplication   : App is working!!
+2024-10-16T03:47:03.060+07:00  INFO 25608 --- [doctorcare] [http-nio-8080-exec-2] o.a.c.c.C.[.[localhost].[/DoctorCare]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-10-16T03:47:03.060+07:00  INFO 25608 --- [doctorcare] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-10-16T03:47:03.063+07:00  INFO 25608 --- [doctorcare] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2024-10-16T03:52:25.464+07:00  WARN 25608 --- [doctorcare] [http-nio-8080-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+2024-10-16T03:52:44.903+07:00  WARN 25608 --- [doctorcare] [http-nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public com.dut.doctorcare.dto.response.ApiResponse<com.dut.doctorcare.dto.response.IntrospecResponse> com.dut.doctorcare.controller.AuthenticationController.authenticate(com.dut.doctorcare.dto.request.IntrospecRequest) throws java.text.ParseException,com.nimbusds.jose.JOSEException]
+2024-10-16T03:55:24.932+07:00  WARN 25608 --- [doctorcare] [http-nio-8080-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public com.dut.doctorcare.dto.response.ApiResponse<com.dut.doctorcare.dto.response.IntrospecResponse> com.dut.doctorcare.controller.AuthenticationController.authenticate(com.dut.doctorcare.dto.request.IntrospecRequest) throws java.text.ParseException,com.nimbusds.jose.JOSEException]
+2024-10-16T03:56:58.183+07:00  INFO 25608 --- [doctorcare] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-16T03:56:58.270+07:00  INFO 25608 --- [doctorcare] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2024-10-16T03:56:58.392+07:00  INFO 25608 --- [doctorcare] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2024-10-16T05:26:46.987+07:00  INFO 2108 --- [doctorcare] [restartedMain] c.dut.doctorcare.DoctorCareApplication   : Starting DoctorCareApplication using Java 17.0.12 with PID 2108 (D:\DATN\doctor-care\doctor-care\target\classes started by nguye in D:\DATN\doctor-care\doctor-care)
+2024-10-16T05:26:46.991+07:00  INFO 2108 --- [doctorcare] [restartedMain] c.dut.doctorcare.DoctorCareApplication   : The following 1 profile is active: "local"
+2024-10-16T05:26:47.075+07:00  INFO 2108 --- [doctorcare] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-10-16T05:26:47.076+07:00  INFO 2108 --- [doctorcare] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-10-16T05:26:49.603+07:00  INFO 2108 --- [doctorcare] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-16T05:26:49.649+07:00  INFO 2108 --- [doctorcare] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 38 ms. Found 0 JPA repository interfaces.
+2024-10-16T05:26:50.767+07:00  INFO 2108 --- [doctorcare] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-10-16T05:26:50.786+07:00  INFO 2108 --- [doctorcare] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-10-16T05:26:50.786+07:00  INFO 2108 --- [doctorcare] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-16T05:26:50.866+07:00  INFO 2108 --- [doctorcare] [restartedMain] o.a.c.c.C.[.[localhost].[/DoctorCare]    : Initializing Spring embedded WebApplicationContext
+2024-10-16T05:26:50.866+07:00  INFO 2108 --- [doctorcare] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3789 ms
+2024-10-16T05:26:51.348+07:00  INFO 2108 --- [doctorcare] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-16T05:26:51.457+07:00  INFO 2108 --- [doctorcare] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-10-16T05:26:51.516+07:00  INFO 2108 --- [doctorcare] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-10-16T05:26:51.921+07:00  INFO 2108 --- [doctorcare] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-16T05:26:51.958+07:00  INFO 2108 --- [doctorcare] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-10-16T05:26:52.467+07:00  INFO 2108 --- [doctorcare] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1d504f6
+2024-10-16T05:26:52.468+07:00  INFO 2108 --- [doctorcare] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-10-16T05:26:52.566+07:00  WARN 2108 --- [doctorcare] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-10-16T05:26:54.195+07:00  INFO 2108 --- [doctorcare] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-16T05:26:54.578+07:00  INFO 2108 --- [doctorcare] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-16T05:26:55.013+07:00  WARN 2108 --- [doctorcare] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-16T05:26:55.766+07:00  INFO 2108 --- [doctorcare] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2024-10-16T05:26:56.708+07:00  INFO 2108 --- [doctorcare] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-10-16T05:26:56.813+07:00  INFO 2108 --- [doctorcare] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/DoctorCare'
+2024-10-16T05:26:56.835+07:00  INFO 2108 --- [doctorcare] [restartedMain] c.dut.doctorcare.DoctorCareApplication   : Started DoctorCareApplication in 10.626 seconds (process running for 11.921)
+2024-10-16T05:26:57.289+07:00  INFO 2108 --- [doctorcare] [restartedMain] c.dut.doctorcare.DoctorCareApplication   : App is working!!
+2024-10-16T05:26:57.346+07:00  INFO 2108 --- [doctorcare] [RMI TCP Connection(1)-192.168.31.55] o.a.c.c.C.[.[localhost].[/DoctorCare]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-10-16T05:26:57.348+07:00  INFO 2108 --- [doctorcare] [RMI TCP Connection(1)-192.168.31.55] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-10-16T05:26:57.349+07:00  INFO 2108 --- [doctorcare] [RMI TCP Connection(1)-192.168.31.55] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-10-16T05:28:04.770+07:00  WARN 2108 --- [doctorcare] [http-nio-8080-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.security.authorization.AuthorizationDeniedException: Access Denied]
+2024-10-16T05:28:10.744+07:00  WARN 2108 --- [doctorcare] [http-nio-8080-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.security.authorization.AuthorizationDeniedException: Access Denied]
+2024-10-16T05:28:14.859+07:00  WARN 2108 --- [doctorcare] [http-nio-8080-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.security.authorization.AuthorizationDeniedException: Access Denied]
+2024-10-16T05:28:38.618+07:00  WARN 2108 --- [doctorcare] [http-nio-8080-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.dut.doctorcare.exception.AppException: Email or password not found.]
+2024-10-16T05:29:39.670+07:00  WARN 2108 --- [doctorcare] [http-nio-8080-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.security.authorization.AuthorizationDeniedException: Access Denied]
+2024-10-16T05:30:02.425+07:00  WARN 2108 --- [doctorcare] [http-nio-8080-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.security.authorization.AuthorizationDeniedException: Access Denied]
+2024-10-16T05:32:01.867+07:00  INFO 2108 --- [doctorcare] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-16T05:32:01.901+07:00  INFO 2108 --- [doctorcare] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-10-16T05:32:01.939+07:00  INFO 2108 --- [doctorcare] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-10-16T05:35:01.644+07:00  INFO 17160 --- [doctorcare] [restartedMain] c.dut.doctorcare.DoctorCareApplication   : Starting DoctorCareApplication using Java 17.0.12 with PID 17160 (D:\DATN\doctor-care\doctor-care\target\classes started by nguye in D:\DATN\doctor-care\doctor-care)
+2024-10-16T05:35:01.647+07:00  INFO 17160 --- [doctorcare] [restartedMain] c.dut.doctorcare.DoctorCareApplication   : The following 1 profile is active: "local"
+2024-10-16T05:35:01.695+07:00  INFO 17160 --- [doctorcare] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-10-16T05:35:01.696+07:00  INFO 17160 --- [doctorcare] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-10-16T05:35:03.484+07:00  INFO 17160 --- [doctorcare] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-16T05:35:03.545+07:00  INFO 17160 --- [doctorcare] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 51 ms. Found 0 JPA repository interfaces.
+2024-10-16T05:35:04.410+07:00  INFO 17160 --- [doctorcare] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-10-16T05:35:04.424+07:00  INFO 17160 --- [doctorcare] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-10-16T05:35:04.424+07:00  INFO 17160 --- [doctorcare] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-16T05:35:04.493+07:00  INFO 17160 --- [doctorcare] [restartedMain] o.a.c.c.C.[.[localhost].[/DoctorCare]    : Initializing Spring embedded WebApplicationContext
+2024-10-16T05:35:04.493+07:00  INFO 17160 --- [doctorcare] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2797 ms
+2024-10-16T05:35:04.889+07:00  INFO 17160 --- [doctorcare] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-16T05:35:04.972+07:00  INFO 17160 --- [doctorcare] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-10-16T05:35:05.017+07:00  INFO 17160 --- [doctorcare] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-10-16T05:35:05.353+07:00  INFO 17160 --- [doctorcare] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-16T05:35:05.386+07:00  INFO 17160 --- [doctorcare] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-10-16T05:35:05.787+07:00  INFO 17160 --- [doctorcare] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7e9b8bbd
+2024-10-16T05:35:05.788+07:00  INFO 17160 --- [doctorcare] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-10-16T05:35:05.851+07:00  WARN 17160 --- [doctorcare] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-10-16T05:35:07.406+07:00  INFO 17160 --- [doctorcare] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-16T05:35:07.681+07:00  INFO 17160 --- [doctorcare] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-16T05:35:08.022+07:00  WARN 17160 --- [doctorcare] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-16T05:35:08.622+07:00  INFO 17160 --- [doctorcare] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2024-10-16T05:35:09.473+07:00  INFO 17160 --- [doctorcare] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-10-16T05:35:09.560+07:00  INFO 17160 --- [doctorcare] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/DoctorCare'
+2024-10-16T05:35:09.583+07:00  INFO 17160 --- [doctorcare] [restartedMain] c.dut.doctorcare.DoctorCareApplication   : Started DoctorCareApplication in 8.461 seconds (process running for 9.457)
+2024-10-16T05:35:10.019+07:00  INFO 17160 --- [doctorcare] [restartedMain] c.dut.doctorcare.DoctorCareApplication   : App is working!!
+2024-10-16T05:35:10.239+07:00  INFO 17160 --- [doctorcare] [RMI TCP Connection(2)-192.168.31.55] o.a.c.c.C.[.[localhost].[/DoctorCare]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-10-16T05:35:10.240+07:00  INFO 17160 --- [doctorcare] [RMI TCP Connection(2)-192.168.31.55] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-10-16T05:35:10.241+07:00  INFO 17160 --- [doctorcare] [RMI TCP Connection(2)-192.168.31.55] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-10-16T05:35:17.384+07:00  WARN 17160 --- [doctorcare] [http-nio-8080-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.security.authorization.AuthorizationDeniedException: Access Denied]
+2024-10-16T05:35:20.259+07:00  WARN 17160 --- [doctorcare] [http-nio-8080-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.security.authorization.AuthorizationDeniedException: Access Denied]
+2024-10-16T05:39:04.615+07:00  INFO 17160 --- [doctorcare] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-16T05:39:04.649+07:00  INFO 17160 --- [doctorcare] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-10-16T05:39:04.681+07:00  INFO 17160 --- [doctorcare] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-10-16T06:27:28.909+07:00  INFO 9672 --- [doctorcare] [restartedMain] c.dut.doctorcare.DoctorCareApplication   : Starting DoctorCareApplication using Java 17.0.12 with PID 9672 (D:\DATN\doctor-care\doctor-care\target\classes started by nguye in D:\DATN\doctor-care\doctor-care)
+2024-10-16T06:27:28.912+07:00  INFO 9672 --- [doctorcare] [restartedMain] c.dut.doctorcare.DoctorCareApplication   : The following 1 profile is active: "local"
+2024-10-16T06:27:28.968+07:00  INFO 9672 --- [doctorcare] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-10-16T06:27:28.969+07:00  INFO 9672 --- [doctorcare] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-10-16T06:27:30.506+07:00  INFO 9672 --- [doctorcare] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-16T06:27:30.547+07:00  INFO 9672 --- [doctorcare] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 34 ms. Found 0 JPA repository interfaces.
+2024-10-16T06:27:31.470+07:00  INFO 9672 --- [doctorcare] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-10-16T06:27:31.484+07:00  INFO 9672 --- [doctorcare] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-10-16T06:27:31.484+07:00  INFO 9672 --- [doctorcare] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-16T06:27:31.555+07:00  INFO 9672 --- [doctorcare] [restartedMain] o.a.c.c.C.[.[localhost].[/DoctorCare]    : Initializing Spring embedded WebApplicationContext
+2024-10-16T06:27:31.555+07:00  INFO 9672 --- [doctorcare] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2585 ms
+2024-10-16T06:27:31.939+07:00  INFO 9672 --- [doctorcare] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-16T06:27:32.024+07:00  INFO 9672 --- [doctorcare] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-10-16T06:27:32.073+07:00  INFO 9672 --- [doctorcare] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-10-16T06:27:32.443+07:00  INFO 9672 --- [doctorcare] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-16T06:27:32.483+07:00  INFO 9672 --- [doctorcare] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-10-16T06:27:33.101+07:00  INFO 9672 --- [doctorcare] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7e9b8bbd
+2024-10-16T06:27:33.106+07:00  INFO 9672 --- [doctorcare] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-10-16T06:27:33.216+07:00  WARN 9672 --- [doctorcare] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-10-16T06:27:34.884+07:00  INFO 9672 --- [doctorcare] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-16T06:27:35.269+07:00  INFO 9672 --- [doctorcare] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-16T06:27:35.805+07:00  WARN 9672 --- [doctorcare] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-16T06:27:36.589+07:00  INFO 9672 --- [doctorcare] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2024-10-16T06:27:37.537+07:00  INFO 9672 --- [doctorcare] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-10-16T06:27:37.631+07:00  INFO 9672 --- [doctorcare] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/DoctorCare'
+2024-10-16T06:27:37.656+07:00  INFO 9672 --- [doctorcare] [restartedMain] c.dut.doctorcare.DoctorCareApplication   : Started DoctorCareApplication in 9.462 seconds (process running for 10.697)
+2024-10-16T06:27:38.100+07:00  INFO 9672 --- [doctorcare] [restartedMain] c.dut.doctorcare.DoctorCareApplication   : App is working!!
+2024-10-16T06:27:38.170+07:00  INFO 9672 --- [doctorcare] [RMI TCP Connection(1)-192.168.1.10] o.a.c.c.C.[.[localhost].[/DoctorCare]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-10-16T06:27:38.170+07:00  INFO 9672 --- [doctorcare] [RMI TCP Connection(1)-192.168.1.10] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-10-16T06:27:38.173+07:00  INFO 9672 --- [doctorcare] [RMI TCP Connection(1)-192.168.1.10] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2024-10-16T06:28:20.095+07:00  INFO 9672 --- [doctorcare] [http-nio-8080-exec-3] c.d.d.service.impl.UserServiceImpl       : email: admin@gmail.com
+2024-10-16T06:28:20.096+07:00  INFO 9672 --- [doctorcare] [http-nio-8080-exec-3] c.d.d.service.impl.UserServiceImpl       : role: [ROLE_ADMIN]
+2024-10-16T06:30:50.926+07:00  INFO 9672 --- [doctorcare] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-16T06:30:50.939+07:00  INFO 9672 --- [doctorcare] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-10-16T06:30:50.959+07:00  INFO 9672 --- [doctorcare] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-10-16T06:45:51.567+07:00  INFO 26052 --- [doctorcare] [restartedMain] c.dut.doctorcare.DoctorCareApplication   : Starting DoctorCareApplication using Java 17.0.12 with PID 26052 (D:\DATN\doctor-care\doctor-care\target\classes started by nguye in D:\DATN\doctor-care\doctor-care)
+2024-10-16T06:45:51.569+07:00  INFO 26052 --- [doctorcare] [restartedMain] c.dut.doctorcare.DoctorCareApplication   : The following 1 profile is active: "local"
+2024-10-16T06:45:51.607+07:00  INFO 26052 --- [doctorcare] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-10-16T06:45:51.607+07:00  INFO 26052 --- [doctorcare] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-10-16T06:45:52.974+07:00  INFO 26052 --- [doctorcare] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-16T06:45:53.016+07:00  INFO 26052 --- [doctorcare] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 33 ms. Found 0 JPA repository interfaces.
+2024-10-16T06:45:53.914+07:00  INFO 26052 --- [doctorcare] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-10-16T06:45:53.928+07:00  INFO 26052 --- [doctorcare] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-10-16T06:45:53.928+07:00  INFO 26052 --- [doctorcare] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-16T06:45:53.998+07:00  INFO 26052 --- [doctorcare] [restartedMain] o.a.c.c.C.[.[localhost].[/DoctorCare]    : Initializing Spring embedded WebApplicationContext
+2024-10-16T06:45:53.999+07:00  INFO 26052 --- [doctorcare] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2391 ms
+2024-10-16T06:45:54.375+07:00  INFO 26052 --- [doctorcare] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-16T06:45:54.456+07:00  INFO 26052 --- [doctorcare] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-10-16T06:45:54.502+07:00  INFO 26052 --- [doctorcare] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-10-16T06:45:54.857+07:00  INFO 26052 --- [doctorcare] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-16T06:45:54.894+07:00  INFO 26052 --- [doctorcare] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-10-16T06:45:55.318+07:00  INFO 26052 --- [doctorcare] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3cc19915
+2024-10-16T06:45:55.320+07:00  INFO 26052 --- [doctorcare] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-10-16T06:45:55.384+07:00  WARN 26052 --- [doctorcare] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-10-16T06:45:56.675+07:00  INFO 26052 --- [doctorcare] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-16T06:45:56.966+07:00  INFO 26052 --- [doctorcare] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-16T06:45:57.309+07:00  WARN 26052 --- [doctorcare] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-16T06:45:57.928+07:00  INFO 26052 --- [doctorcare] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2024-10-16T06:45:58.734+07:00  INFO 26052 --- [doctorcare] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-10-16T06:45:58.827+07:00  INFO 26052 --- [doctorcare] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/DoctorCare'
+2024-10-16T06:45:58.850+07:00  INFO 26052 --- [doctorcare] [restartedMain] c.dut.doctorcare.DoctorCareApplication   : Started DoctorCareApplication in 7.787 seconds (process running for 8.707)
+2024-10-16T06:45:59.199+07:00  INFO 26052 --- [doctorcare] [RMI TCP Connection(3)-192.168.1.10] o.a.c.c.C.[.[localhost].[/DoctorCare]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-10-16T06:45:59.200+07:00  INFO 26052 --- [doctorcare] [RMI TCP Connection(3)-192.168.1.10] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-10-16T06:45:59.202+07:00  INFO 26052 --- [doctorcare] [RMI TCP Connection(3)-192.168.1.10] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-10-16T06:45:59.306+07:00  INFO 26052 --- [doctorcare] [restartedMain] c.dut.doctorcare.DoctorCareApplication   : App is working!!
+2024-10-16T06:46:06.879+07:00  INFO 26052 --- [doctorcare] [http-nio-8080-exec-1] c.d.d.service.impl.UserServiceImpl       : email: admin@gmail.com
+2024-10-16T06:46:06.881+07:00  INFO 26052 --- [doctorcare] [http-nio-8080-exec-1] c.d.d.service.impl.UserServiceImpl       : role: Optional[ROLE_ADMIN]
+2024-10-16T06:46:43.582+07:00  INFO 26052 --- [doctorcare] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2024-10-16T06:46:43.948+07:00  INFO 26052 --- [doctorcare] [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-16T06:46:43.955+07:00  INFO 26052 --- [doctorcare] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-10-16T06:46:43.975+07:00  INFO 26052 --- [doctorcare] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-10-16T06:46:44.107+07:00  INFO 26052 --- [doctorcare] [restartedMain] c.dut.doctorcare.DoctorCareApplication   : Starting DoctorCareApplication using Java 17.0.12 with PID 26052 (D:\DATN\doctor-care\doctor-care\target\classes started by nguye in D:\DATN\doctor-care\doctor-care)
+2024-10-16T06:46:44.108+07:00  INFO 26052 --- [doctorcare] [restartedMain] c.dut.doctorcare.DoctorCareApplication   : The following 1 profile is active: "local"
+2024-10-16T06:46:45.010+07:00  INFO 26052 --- [doctorcare] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-16T06:46:45.033+07:00  INFO 26052 --- [doctorcare] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22 ms. Found 0 JPA repository interfaces.
+2024-10-16T06:46:45.249+07:00  INFO 26052 --- [doctorcare] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-10-16T06:46:45.251+07:00  INFO 26052 --- [doctorcare] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-10-16T06:46:45.251+07:00  INFO 26052 --- [doctorcare] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-16T06:46:45.283+07:00  INFO 26052 --- [doctorcare] [restartedMain] o.a.c.c.C.[.[localhost].[/DoctorCare]    : Initializing Spring embedded WebApplicationContext
+2024-10-16T06:46:45.283+07:00  INFO 26052 --- [doctorcare] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1174 ms
+2024-10-16T06:46:45.526+07:00  INFO 26052 --- [doctorcare] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-16T06:46:45.530+07:00  INFO 26052 --- [doctorcare] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-10-16T06:46:45.538+07:00  INFO 26052 --- [doctorcare] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-16T06:46:45.539+07:00  INFO 26052 --- [doctorcare] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2024-10-16T06:46:45.559+07:00  INFO 26052 --- [doctorcare] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@39fe806a
+2024-10-16T06:46:45.559+07:00  INFO 26052 --- [doctorcare] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2024-10-16T06:46:45.561+07:00  WARN 26052 --- [doctorcare] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-10-16T06:46:45.814+07:00  INFO 26052 --- [doctorcare] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-16T06:46:46.054+07:00  INFO 26052 --- [doctorcare] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-16T06:46:46.195+07:00  WARN 26052 --- [doctorcare] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userController' defined in file [D:\DATN\doctor-care\doctor-care\target\classes\com\dut\doctorcare\controller\UserController.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'com.dut.doctorcare.service.iface.UserService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2024-10-16T06:46:46.196+07:00  INFO 26052 --- [doctorcare] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-16T06:46:46.197+07:00  INFO 26052 --- [doctorcare] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2024-10-16T06:46:46.206+07:00  INFO 26052 --- [doctorcare] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2024-10-16T06:46:46.208+07:00  INFO 26052 --- [doctorcare] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-10-16T06:46:46.231+07:00  INFO 26052 --- [doctorcare] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-10-16T06:46:46.277+07:00 ERROR 26052 --- [doctorcare] [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.dut.doctorcare.controller.UserController required a bean of type 'com.dut.doctorcare.service.iface.UserService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
 
 
-Positive matches:
------------------
+Action:
 
-    None
+Consider defining a bean of type 'com.dut.doctorcare.service.iface.UserService' in your configuration.
+
+2024-10-16T06:52:45.797+07:00  INFO 24612 --- [doctorcare] [restartedMain] c.dut.doctorcare.DoctorCareApplication   : Starting DoctorCareApplication using Java 17.0.12 with PID 24612 (D:\DATN\doctor-care\doctor-care\target\classes started by nguye in D:\DATN\doctor-care\doctor-care)
+2024-10-16T06:52:45.801+07:00  INFO 24612 --- [doctorcare] [restartedMain] c.dut.doctorcare.DoctorCareApplication   : The following 1 profile is active: "local"
+2024-10-16T06:52:45.843+07:00  INFO 24612 --- [doctorcare] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-10-16T06:52:45.843+07:00  INFO 24612 --- [doctorcare] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-10-16T06:52:47.149+07:00  INFO 24612 --- [doctorcare] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-16T06:52:47.183+07:00  INFO 24612 --- [doctorcare] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 28 ms. Found 0 JPA repository interfaces.
+2024-10-16T06:52:48.094+07:00  INFO 24612 --- [doctorcare] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-10-16T06:52:48.108+07:00  INFO 24612 --- [doctorcare] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-10-16T06:52:48.108+07:00  INFO 24612 --- [doctorcare] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-16T06:52:48.172+07:00  INFO 24612 --- [doctorcare] [restartedMain] o.a.c.c.C.[.[localhost].[/DoctorCare]    : Initializing Spring embedded WebApplicationContext
+2024-10-16T06:52:48.172+07:00  INFO 24612 --- [doctorcare] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2328 ms
+2024-10-16T06:52:48.582+07:00  INFO 24612 --- [doctorcare] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-16T06:52:48.685+07:00  INFO 24612 --- [doctorcare] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-10-16T06:52:48.737+07:00  INFO 24612 --- [doctorcare] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-10-16T06:52:49.088+07:00  INFO 24612 --- [doctorcare] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-16T06:52:49.121+07:00  INFO 24612 --- [doctorcare] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-10-16T06:52:49.560+07:00  INFO 24612 --- [doctorcare] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@16423358
+2024-10-16T06:52:49.562+07:00  INFO 24612 --- [doctorcare] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-10-16T06:52:49.639+07:00  WARN 24612 --- [doctorcare] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-10-16T06:52:51.096+07:00  INFO 24612 --- [doctorcare] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-16T06:52:51.457+07:00  INFO 24612 --- [doctorcare] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-16T06:52:51.916+07:00  WARN 24612 --- [doctorcare] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-16T06:52:52.768+07:00  INFO 24612 --- [doctorcare] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2024-10-16T06:52:54.507+07:00  INFO 24612 --- [doctorcare] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-10-16T06:52:54.649+07:00  INFO 24612 --- [doctorcare] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/DoctorCare'
+2024-10-16T06:52:54.684+07:00  INFO 24612 --- [doctorcare] [restartedMain] c.dut.doctorcare.DoctorCareApplication   : Started DoctorCareApplication in 9.346 seconds (process running for 10.25)
+2024-10-16T06:52:55.052+07:00  INFO 24612 --- [doctorcare] [RMI TCP Connection(2)-192.168.1.10] o.a.c.c.C.[.[localhost].[/DoctorCare]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-10-16T06:52:55.052+07:00  INFO 24612 --- [doctorcare] [RMI TCP Connection(2)-192.168.1.10] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-10-16T06:52:55.055+07:00  INFO 24612 --- [doctorcare] [RMI TCP Connection(2)-192.168.1.10] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2024-10-16T06:52:55.314+07:00  INFO 24612 --- [doctorcare] [restartedMain] c.dut.doctorcare.DoctorCareApplication   : App is working!!
+2024-10-16T06:53:02.196+07:00  INFO 24612 --- [doctorcare] [http-nio-8080-exec-2] c.d.d.service.impl.UserServiceImpl       : email: admin@gmail.com
+2024-10-16T06:53:02.200+07:00  INFO 24612 --- [doctorcare] [http-nio-8080-exec-2] c.d.d.service.impl.UserServiceImpl       : role: java.util.stream.ReferencePipeline$3@58014e05
+2024-10-16T06:54:13.163+07:00  INFO 24612 --- [doctorcare] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-16T06:54:13.169+07:00  INFO 24612 --- [doctorcare] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-10-16T06:54:13.201+07:00  INFO 24612 --- [doctorcare] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-10-16T06:54:18.927+07:00  INFO 12248 --- [doctorcare] [restartedMain] c.dut.doctorcare.DoctorCareApplication   : Starting DoctorCareApplication using Java 17.0.12 with PID 12248 (D:\DATN\doctor-care\doctor-care\target\classes started by nguye in D:\DATN\doctor-care\doctor-care)
+2024-10-16T06:54:18.931+07:00  INFO 12248 --- [doctorcare] [restartedMain] c.dut.doctorcare.DoctorCareApplication   : The following 1 profile is active: "local"
+2024-10-16T06:54:18.993+07:00  INFO 12248 --- [doctorcare] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-10-16T06:54:18.993+07:00  INFO 12248 --- [doctorcare] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-10-16T06:54:20.513+07:00  INFO 12248 --- [doctorcare] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-16T06:54:20.563+07:00  INFO 12248 --- [doctorcare] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 41 ms. Found 0 JPA repository interfaces.
+2024-10-16T06:54:21.482+07:00  INFO 12248 --- [doctorcare] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-10-16T06:54:21.496+07:00  INFO 12248 --- [doctorcare] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-10-16T06:54:21.496+07:00  INFO 12248 --- [doctorcare] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-16T06:54:21.572+07:00  INFO 12248 --- [doctorcare] [restartedMain] o.a.c.c.C.[.[localhost].[/DoctorCare]    : Initializing Spring embedded WebApplicationContext
+2024-10-16T06:54:21.573+07:00  INFO 12248 --- [doctorcare] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2579 ms
+2024-10-16T06:54:21.968+07:00  INFO 12248 --- [doctorcare] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-16T06:54:22.072+07:00  INFO 12248 --- [doctorcare] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-10-16T06:54:22.121+07:00  INFO 12248 --- [doctorcare] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-10-16T06:54:22.467+07:00  INFO 12248 --- [doctorcare] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-16T06:54:22.501+07:00  INFO 12248 --- [doctorcare] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-10-16T06:54:22.904+07:00  INFO 12248 --- [doctorcare] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2783722b
+2024-10-16T06:54:22.906+07:00  INFO 12248 --- [doctorcare] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-10-16T06:54:22.969+07:00  WARN 12248 --- [doctorcare] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-10-16T06:54:24.350+07:00  INFO 12248 --- [doctorcare] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-16T06:54:24.596+07:00  INFO 12248 --- [doctorcare] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-16T06:54:24.975+07:00  WARN 12248 --- [doctorcare] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-16T06:54:25.698+07:00  INFO 12248 --- [doctorcare] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2024-10-16T06:54:26.556+07:00  INFO 12248 --- [doctorcare] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-10-16T06:54:26.639+07:00  INFO 12248 --- [doctorcare] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/DoctorCare'
+2024-10-16T06:54:26.659+07:00  INFO 12248 --- [doctorcare] [restartedMain] c.dut.doctorcare.DoctorCareApplication   : Started DoctorCareApplication in 8.371 seconds (process running for 9.377)
+2024-10-16T06:54:27.047+07:00  INFO 12248 --- [doctorcare] [restartedMain] c.dut.doctorcare.DoctorCareApplication   : App is working!!
+2024-10-16T06:54:27.317+07:00  INFO 12248 --- [doctorcare] [RMI TCP Connection(2)-192.168.1.10] o.a.c.c.C.[.[localhost].[/DoctorCare]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-10-16T06:54:27.317+07:00  INFO 12248 --- [doctorcare] [RMI TCP Connection(2)-192.168.1.10] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-10-16T06:54:27.320+07:00  INFO 12248 --- [doctorcare] [RMI TCP Connection(2)-192.168.1.10] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2024-10-16T06:54:34.682+07:00  INFO 12248 --- [doctorcare] [http-nio-8080-exec-3] c.d.d.service.impl.UserServiceImpl       : email: admin@gmail.com
+2024-10-16T06:54:34.683+07:00  INFO 12248 --- [doctorcare] [http-nio-8080-exec-3] c.d.d.service.impl.UserServiceImpl       : role: Optional[ROLE_ADMIN]
+2024-10-16T06:56:15.659+07:00  INFO 12248 --- [doctorcare] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2024-10-16T06:56:15.886+07:00  INFO 12248 --- [doctorcare] [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-16T06:56:15.893+07:00  INFO 12248 --- [doctorcare] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-10-16T06:56:15.909+07:00  INFO 12248 --- [doctorcare] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-10-16T06:56:16.041+07:00  INFO 12248 --- [doctorcare] [restartedMain] c.dut.doctorcare.DoctorCareApplication   : Starting DoctorCareApplication using Java 17.0.12 with PID 12248 (D:\DATN\doctor-care\doctor-care\target\classes started by nguye in D:\DATN\doctor-care\doctor-care)
+2024-10-16T06:56:16.041+07:00  INFO 12248 --- [doctorcare] [restartedMain] c.dut.doctorcare.DoctorCareApplication   : The following 1 profile is active: "local"
+2024-10-16T06:56:16.703+07:00  INFO 12248 --- [doctorcare] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-16T06:56:16.736+07:00  INFO 12248 --- [doctorcare] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 32 ms. Found 0 JPA repository interfaces.
+2024-10-16T06:56:17.046+07:00  INFO 12248 --- [doctorcare] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-10-16T06:56:17.047+07:00  INFO 12248 --- [doctorcare] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-10-16T06:56:17.048+07:00  INFO 12248 --- [doctorcare] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-16T06:56:17.072+07:00  INFO 12248 --- [doctorcare] [restartedMain] o.a.c.c.C.[.[localhost].[/DoctorCare]    : Initializing Spring embedded WebApplicationContext
+2024-10-16T06:56:17.073+07:00  INFO 12248 --- [doctorcare] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1030 ms
+2024-10-16T06:56:17.374+07:00  INFO 12248 --- [doctorcare] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-16T06:56:17.379+07:00  INFO 12248 --- [doctorcare] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-10-16T06:56:17.395+07:00  INFO 12248 --- [doctorcare] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-16T06:56:17.398+07:00  INFO 12248 --- [doctorcare] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2024-10-16T06:56:17.423+07:00  INFO 12248 --- [doctorcare] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4ec246cc
+2024-10-16T06:56:17.423+07:00  INFO 12248 --- [doctorcare] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2024-10-16T06:56:17.425+07:00  WARN 12248 --- [doctorcare] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-10-16T06:56:17.824+07:00  INFO 12248 --- [doctorcare] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-16T06:56:17.988+07:00  INFO 12248 --- [doctorcare] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-16T06:56:18.084+07:00  WARN 12248 --- [doctorcare] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userController' defined in file [D:\DATN\doctor-care\doctor-care\target\classes\com\dut\doctorcare\controller\UserController.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'com.dut.doctorcare.service.iface.UserService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2024-10-16T06:56:18.084+07:00  INFO 12248 --- [doctorcare] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-16T06:56:18.084+07:00  INFO 12248 --- [doctorcare] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2024-10-16T06:56:18.089+07:00  INFO 12248 --- [doctorcare] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2024-10-16T06:56:18.090+07:00  INFO 12248 --- [doctorcare] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-10-16T06:56:18.104+07:00  INFO 12248 --- [doctorcare] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-10-16T06:56:18.132+07:00 ERROR 12248 --- [doctorcare] [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.dut.doctorcare.controller.UserController required a bean of type 'com.dut.doctorcare.service.iface.UserService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
 
 
-Negative matches:
------------------
+Action:
 
-   ManagementWebSecurityAutoConfiguration:
-      Did not match:
-         - AllNestedConditions 1 matched 1 did not; NestedCondition on DefaultWebSecurityCondition.Beans @ConditionalOnMissingBean (types: org.springframework.security.web.SecurityFilterChain; SearchStrategy: all) found beans of type 'org.springframework.security.web.SecurityFilterChain' securityFilterChain; NestedCondition on DefaultWebSecurityCondition.Classes @ConditionalOnClass found required classes 'org.springframework.security.web.SecurityFilterChain', 'org.springframework.security.config.annotation.web.builders.HttpSecurity' (DefaultWebSecurityCondition)
-      Matched:
-         - found 'session' scope (OnWebApplicationCondition)
+Consider defining a bean of type 'com.dut.doctorcare.service.iface.UserService' in your configuration.
 
-   OAuth2ResourceServerJwtConfiguration.JwtDecoderConfiguration:
-      Did not match:
-         - @ConditionalOnMissingBean (types: org.springframework.security.oauth2.jwt.JwtDecoder; SearchStrategy: all) found beans of type 'org.springframework.security.oauth2.jwt.JwtDecoder' jwtDecoder (OnBeanCondition)
-
-   OAuth2ResourceServerJwtConfiguration.OAuth2SecurityFilterChainConfiguration:
-      Did not match:
-         - AllNestedConditions 1 matched 1 did not; NestedCondition on DefaultWebSecurityCondition.Beans @ConditionalOnMissingBean (types: org.springframework.security.web.SecurityFilterChain; SearchStrategy: all) found beans of type 'org.springframework.security.web.SecurityFilterChain' securityFilterChain; NestedCondition on DefaultWebSecurityCondition.Classes @ConditionalOnClass found required classes 'org.springframework.security.web.SecurityFilterChain', 'org.springframework.security.config.annotation.web.builders.HttpSecurity' (DefaultWebSecurityCondition)
-
-   OAuth2ResourceServerOpaqueTokenConfiguration.OAuth2SecurityFilterChainConfiguration:
-      Did not match:
-         - AllNestedConditions 1 matched 1 did not; NestedCondition on DefaultWebSecurityCondition.Beans @ConditionalOnMissingBean (types: org.springframework.security.web.SecurityFilterChain; SearchStrategy: all) found beans of type 'org.springframework.security.web.SecurityFilterChain' securityFilterChain; NestedCondition on DefaultWebSecurityCondition.Classes @ConditionalOnClass found required classes 'org.springframework.security.web.SecurityFilterChain', 'org.springframework.security.config.annotation.web.builders.HttpSecurity' (DefaultWebSecurityCondition)
-
-   SpringBootWebSecurityConfiguration.WebSecurityEnablerConfiguration:
-      Did not match:
-         - @ConditionalOnMissingBean (names: springSecurityFilterChain; SearchStrategy: all) found beans named springSecurityFilterChain (OnBeanCondition)
-      Matched:
-         - @ConditionalOnClass found required class 'org.springframework.security.config.annotation.web.configuration.EnableWebSecurity' (OnClassCondition)
-
-
-Exclusions:
------------
-
-    None
-
-
-Unconditional classes:
-----------------------
-
-    None
-
-
-
-2024-10-15T09:47:44.212+07:00  INFO 19884 --- [doctorcare] [restartedMain] c.dut.doctorcare.DoctorCareApplication   : App is working!!
-2024-10-15T09:48:16.938+07:00  INFO 19884 --- [doctorcare] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-10-15T09:48:16.938+07:00  INFO 19884 --- [doctorcare] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
-2024-10-15T09:48:16.944+07:00  INFO 19884 --- [doctorcare] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2024-10-16T06:56:19.640+07:00  INFO 12248 --- [doctorcare] [restartedMain] c.dut.doctorcare.DoctorCareApplication   : Starting DoctorCareApplication using Java 17.0.12 with PID 12248 (D:\DATN\doctor-care\doctor-care\target\classes started by nguye in D:\DATN\doctor-care\doctor-care)
+2024-10-16T06:56:19.641+07:00  INFO 12248 --- [doctorcare] [restartedMain] c.dut.doctorcare.DoctorCareApplication   : The following 1 profile is active: "local"
+2024-10-16T06:56:20.023+07:00  INFO 12248 --- [doctorcare] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-16T06:56:20.054+07:00  INFO 12248 --- [doctorcare] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 30 ms. Found 0 JPA repository interfaces.
+2024-10-16T06:56:20.199+07:00  INFO 12248 --- [doctorcare] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-10-16T06:56:20.218+07:00  INFO 12248 --- [doctorcare] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 577 ms
+2024-10-16T06:56:20.462+07:00  INFO 12248 --- [doctorcare] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-16T06:56:20.464+07:00  INFO 12248 --- [doctorcare] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-10-16T06:56:20.470+07:00  INFO 12248 --- [doctorcare] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-16T06:56:20.471+07:00  INFO 12248 --- [doctorcare] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2024-10-16T06:56:20.484+07:00  INFO 12248 --- [doctorcare] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@63789345
+2024-10-16T06:56:20.484+07:00  INFO 12248 --- [doctorcare] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2024-10-16T06:56:20.485+07:00  WARN 12248 --- [doctorcare] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-10-16T06:56:20.682+07:00  INFO 12248 --- [doctorcare] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-16T06:56:20.841+07:00  INFO 12248 --- [doctorcare] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-16T06:56:21.072+07:00  WARN 12248 --- [doctorcare] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-16T06:56:21.389+07:00  INFO 12248 --- [doctorcare] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2024-10-16T06:56:21.814+07:00  INFO 12248 --- [doctorcare] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-10-16T06:56:21.839+07:00  INFO 12248 --- [doctorcare] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/DoctorCare'
+2024-10-16T06:56:21.852+07:00  INFO 12248 --- [doctorcare] [restartedMain] c.dut.doctorcare.DoctorCareApplication   : Started DoctorCareApplication in 2.241 seconds (process running for 124.57)
+2024-10-16T06:56:21.855+07:00  INFO 12248 --- [doctorcare] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-10-16T06:56:21.864+07:00  INFO 12248 --- [doctorcare] [restartedMain] c.dut.doctorcare.DoctorCareApplication   : App is working!!
+2024-10-16T06:56:22.015+07:00  INFO 12248 --- [doctorcare] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-16T06:56:22.015+07:00  INFO 12248 --- [doctorcare] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2024-10-16T06:56:22.021+07:00  INFO 12248 --- [doctorcare] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2024-10-16T06:56:26.215+07:00  INFO 11380 --- [doctorcare] [restartedMain] c.dut.doctorcare.DoctorCareApplication   : Starting DoctorCareApplication using Java 17.0.12 with PID 11380 (D:\DATN\doctor-care\doctor-care\target\classes started by nguye in D:\DATN\doctor-care\doctor-care)
+2024-10-16T06:56:26.218+07:00  INFO 11380 --- [doctorcare] [restartedMain] c.dut.doctorcare.DoctorCareApplication   : The following 1 profile is active: "local"
+2024-10-16T06:56:26.283+07:00  INFO 11380 --- [doctorcare] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-10-16T06:56:26.283+07:00  INFO 11380 --- [doctorcare] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-10-16T06:56:27.918+07:00  INFO 11380 --- [doctorcare] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-16T06:56:27.971+07:00  INFO 11380 --- [doctorcare] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 41 ms. Found 0 JPA repository interfaces.
+2024-10-16T06:56:28.756+07:00  INFO 11380 --- [doctorcare] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-10-16T06:56:28.770+07:00  INFO 11380 --- [doctorcare] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-10-16T06:56:28.770+07:00  INFO 11380 --- [doctorcare] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-16T06:56:28.834+07:00  INFO 11380 --- [doctorcare] [restartedMain] o.a.c.c.C.[.[localhost].[/DoctorCare]    : Initializing Spring embedded WebApplicationContext
+2024-10-16T06:56:28.834+07:00  INFO 11380 --- [doctorcare] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2550 ms
+2024-10-16T06:56:29.181+07:00  INFO 11380 --- [doctorcare] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-16T06:56:29.227+07:00  INFO 11380 --- [doctorcare] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-10-16T06:56:29.256+07:00  INFO 11380 --- [doctorcare] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-10-16T06:56:29.521+07:00  INFO 11380 --- [doctorcare] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-16T06:56:29.547+07:00  INFO 11380 --- [doctorcare] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-10-16T06:56:29.809+07:00  INFO 11380 --- [doctorcare] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6810a965
+2024-10-16T06:56:29.810+07:00  INFO 11380 --- [doctorcare] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-10-16T06:56:29.857+07:00  WARN 11380 --- [doctorcare] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-10-16T06:56:31.114+07:00  INFO 11380 --- [doctorcare] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-16T06:56:31.351+07:00  INFO 11380 --- [doctorcare] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-16T06:56:31.710+07:00  WARN 11380 --- [doctorcare] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-16T06:56:32.273+07:00  INFO 11380 --- [doctorcare] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2024-10-16T06:56:33.165+07:00  INFO 11380 --- [doctorcare] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-10-16T06:56:33.250+07:00  INFO 11380 --- [doctorcare] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/DoctorCare'
+2024-10-16T06:56:33.272+07:00  INFO 11380 --- [doctorcare] [restartedMain] c.dut.doctorcare.DoctorCareApplication   : Started DoctorCareApplication in 7.712 seconds (process running for 10.294)
+2024-10-16T06:56:33.565+07:00  INFO 11380 --- [doctorcare] [RMI TCP Connection(2)-192.168.1.10] o.a.c.c.C.[.[localhost].[/DoctorCare]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-10-16T06:56:33.566+07:00  INFO 11380 --- [doctorcare] [RMI TCP Connection(2)-192.168.1.10] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-10-16T06:56:33.568+07:00  INFO 11380 --- [doctorcare] [RMI TCP Connection(2)-192.168.1.10] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-10-16T06:56:33.697+07:00  INFO 11380 --- [doctorcare] [restartedMain] c.dut.doctorcare.DoctorCareApplication   : App is working!!
+2024-10-16T06:56:42.042+07:00  INFO 11380 --- [doctorcare] [http-nio-8080-exec-1] c.d.d.service.impl.UserServiceImpl       : email: admin@gmail.com
+2024-10-16T06:56:42.043+07:00  INFO 11380 --- [doctorcare] [http-nio-8080-exec-1] c.d.d.service.impl.UserServiceImpl       : role: ROLE_ADMIN
+2024-10-16T08:17:18.478+07:00  INFO 11380 --- [doctorcare] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-16T08:17:18.648+07:00  INFO 11380 --- [doctorcare] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-10-16T08:17:18.756+07:00  INFO 11380 --- [doctorcare] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-10-16T08:27:53.545+07:00  INFO 4124 --- [doctorcare] [restartedMain] c.dut.doctorcare.DoctorCareApplication   : Starting DoctorCareApplication using Java 17.0.12 with PID 4124 (D:\DATN\doctor-care\doctor-care\target\classes started by nguye in D:\DATN\doctor-care\doctor-care)
+2024-10-16T08:27:53.547+07:00  INFO 4124 --- [doctorcare] [restartedMain] c.dut.doctorcare.DoctorCareApplication   : The following 1 profile is active: "local"
+2024-10-16T08:27:53.600+07:00  INFO 4124 --- [doctorcare] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-10-16T08:27:53.601+07:00  INFO 4124 --- [doctorcare] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-10-16T08:27:55.330+07:00  INFO 4124 --- [doctorcare] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-16T08:27:55.374+07:00  INFO 4124 --- [doctorcare] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 36 ms. Found 0 JPA repository interfaces.
+2024-10-16T08:27:56.461+07:00  INFO 4124 --- [doctorcare] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-10-16T08:27:56.478+07:00  INFO 4124 --- [doctorcare] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-10-16T08:27:56.479+07:00  INFO 4124 --- [doctorcare] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-16T08:27:56.548+07:00  INFO 4124 --- [doctorcare] [restartedMain] o.a.c.c.C.[.[localhost].[/DoctorCare]    : Initializing Spring embedded WebApplicationContext
+2024-10-16T08:27:56.549+07:00  INFO 4124 --- [doctorcare] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2948 ms
+2024-10-16T08:27:57.124+07:00  INFO 4124 --- [doctorcare] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-16T08:27:57.219+07:00  INFO 4124 --- [doctorcare] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-10-16T08:27:57.281+07:00  INFO 4124 --- [doctorcare] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-10-16T08:27:57.651+07:00  INFO 4124 --- [doctorcare] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-16T08:27:57.687+07:00  INFO 4124 --- [doctorcare] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-10-16T08:27:58.588+07:00  INFO 4124 --- [doctorcare] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5c8977f2
+2024-10-16T08:27:58.591+07:00  INFO 4124 --- [doctorcare] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-10-16T08:27:58.754+07:00  WARN 4124 --- [doctorcare] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-10-16T08:28:01.234+07:00  INFO 4124 --- [doctorcare] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-16T08:28:01.761+07:00  INFO 4124 --- [doctorcare] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-16T08:28:02.395+07:00  WARN 4124 --- [doctorcare] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-16T08:28:03.345+07:00  INFO 4124 --- [doctorcare] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2024-10-16T08:28:04.703+07:00  INFO 4124 --- [doctorcare] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-10-16T08:28:04.896+07:00  INFO 4124 --- [doctorcare] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/DoctorCare'
+2024-10-16T08:28:04.933+07:00  INFO 4124 --- [doctorcare] [restartedMain] c.dut.doctorcare.DoctorCareApplication   : Started DoctorCareApplication in 12.116 seconds (process running for 13.536)
+2024-10-16T08:28:05.358+07:00  INFO 4124 --- [doctorcare] [RMI TCP Connection(1)-192.168.1.2] o.a.c.c.C.[.[localhost].[/DoctorCare]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-10-16T08:28:05.358+07:00  INFO 4124 --- [doctorcare] [RMI TCP Connection(1)-192.168.1.2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-10-16T08:28:05.361+07:00  INFO 4124 --- [doctorcare] [RMI TCP Connection(1)-192.168.1.2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2024-10-16T08:28:05.615+07:00  INFO 4124 --- [doctorcare] [restartedMain] c.dut.doctorcare.DoctorCareApplication   : App is working!!
+2024-10-16T08:31:46.103+07:00  WARN 4124 --- [doctorcare] [http-nio-8080-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.security.authorization.AuthorizationDeniedException: Access Denied]
+2024-10-16T08:39:25.879+07:00  INFO 4124 --- [doctorcare] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-16T08:39:25.891+07:00  INFO 4124 --- [doctorcare] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-10-16T08:39:25.924+07:00  INFO 4124 --- [doctorcare] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-10-16T15:10:38.892+07:00  INFO 18420 --- [doctorcare] [restartedMain] c.dut.doctorcare.DoctorCareApplication   : Starting DoctorCareApplication using Java 17.0.12 with PID 18420 (D:\DATN\doctor-care\doctor-care\target\classes started by nguye in D:\DATN\doctor-care\doctor-care)
+2024-10-16T15:10:38.896+07:00  INFO 18420 --- [doctorcare] [restartedMain] c.dut.doctorcare.DoctorCareApplication   : The following 1 profile is active: "local"
+2024-10-16T15:10:38.982+07:00  INFO 18420 --- [doctorcare] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-10-16T15:10:38.983+07:00  INFO 18420 --- [doctorcare] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-10-16T15:10:40.898+07:00  INFO 18420 --- [doctorcare] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-16T15:10:40.949+07:00  INFO 18420 --- [doctorcare] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 43 ms. Found 0 JPA repository interfaces.
+2024-10-16T15:10:41.929+07:00  INFO 18420 --- [doctorcare] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-10-16T15:10:41.943+07:00  INFO 18420 --- [doctorcare] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-10-16T15:10:41.944+07:00  INFO 18420 --- [doctorcare] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-16T15:10:42.014+07:00  INFO 18420 --- [doctorcare] [restartedMain] o.a.c.c.C.[.[localhost].[/DoctorCare]    : Initializing Spring embedded WebApplicationContext
+2024-10-16T15:10:42.015+07:00  INFO 18420 --- [doctorcare] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3029 ms
+2024-10-16T15:10:42.389+07:00  INFO 18420 --- [doctorcare] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-16T15:10:42.474+07:00  INFO 18420 --- [doctorcare] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-10-16T15:10:42.527+07:00  INFO 18420 --- [doctorcare] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-10-16T15:10:42.905+07:00  INFO 18420 --- [doctorcare] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-16T15:10:42.947+07:00  INFO 18420 --- [doctorcare] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-10-16T15:10:43.582+07:00  INFO 18420 --- [doctorcare] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@554f4206
+2024-10-16T15:10:43.584+07:00  INFO 18420 --- [doctorcare] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-10-16T15:10:43.707+07:00  WARN 18420 --- [doctorcare] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-10-16T15:10:45.161+07:00  INFO 18420 --- [doctorcare] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-16T15:10:46.149+07:00  INFO 18420 --- [doctorcare] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-16T15:10:46.545+07:00  WARN 18420 --- [doctorcare] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-16T15:10:47.177+07:00  INFO 18420 --- [doctorcare] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2024-10-16T15:10:48.144+07:00  INFO 18420 --- [doctorcare] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-10-16T15:10:48.232+07:00  INFO 18420 --- [doctorcare] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/DoctorCare'
+2024-10-16T15:10:48.254+07:00  INFO 18420 --- [doctorcare] [restartedMain] c.dut.doctorcare.DoctorCareApplication   : Started DoctorCareApplication in 10.347 seconds (process running for 12.372)
+2024-10-16T15:10:48.718+07:00  INFO 18420 --- [doctorcare] [restartedMain] c.dut.doctorcare.DoctorCareApplication   : App is working!!
+2024-10-16T15:10:48.883+07:00  INFO 18420 --- [doctorcare] [RMI TCP Connection(1)-192.168.1.10] o.a.c.c.C.[.[localhost].[/DoctorCare]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-10-16T15:10:48.884+07:00  INFO 18420 --- [doctorcare] [RMI TCP Connection(1)-192.168.1.10] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-10-16T15:10:48.886+07:00  INFO 18420 --- [doctorcare] [RMI TCP Connection(1)-192.168.1.10] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-10-16T15:13:24.225+07:00  WARN 18420 --- [doctorcare] [http-nio-8080-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.security.authorization.AuthorizationDeniedException: Access Denied]
+2024-10-16T15:14:14.941+07:00  INFO 18420 --- [doctorcare] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-16T15:14:14.956+07:00  INFO 18420 --- [doctorcare] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-10-16T15:14:14.979+07:00  INFO 18420 --- [doctorcare] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

@@ -16,12 +16,12 @@ public class RoleServiceImpl implements RoleService {
     }
 
     @Override
-    public Role createRole(String roleName) {
+    public Role createRole(Role.RoleName roleName) {
        return roleDao.createRole(roleName);
     }
 
     @Override
-    public Role findRole(String roleName) {
+    public Role findRole(Role.RoleName roleName) {
         return roleDao.findRole(roleName);
     }
 

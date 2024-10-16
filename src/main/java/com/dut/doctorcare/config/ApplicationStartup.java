@@ -29,17 +29,17 @@ public class ApplicationStartup {
     @Transactional
     public void createAdminUser() {
         if (userDao.findByEmail("admin@gmail.com").isEmpty()) {
-            if(roleDao.findRole("ADMIN") == null){
+            if(roleDao.findRole(Role.RoleName.ADMIN) == null){
                 Role adminRole = new Role();
-                adminRole.setRoleName("ADMIN");
+                adminRole.setRoleName(Role.RoleName.ADMIN);
                 roleDao.save(adminRole);
             }
             log.error("Admin role created");
             User adminUser = new User();
-            adminUser.setEmail("admin@gmail.com");
-            adminUser.setPasswordHash(passwordEncoder.encode("admin123"));
+            adminUser.setEmail("admin888@gmail.com");
+            adminUser.setPasswordHash(passwordEncoder.encode("admin888"));
             //adminUser.setDisplayName("Admin");
-            adminUser.setRole(roleDao.findRole("ADMIN"));
+            adminUser.setRole(roleDao.findRole(Role.RoleName.ADMIN));
             userDao.save(adminUser);
             System.out.println("Admin user created");
         }

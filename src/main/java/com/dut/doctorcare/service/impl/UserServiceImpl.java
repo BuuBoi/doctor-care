@@ -20,6 +20,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PostAuthorize;
 import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -49,26 +50,16 @@ public class UserServiceImpl implements UserService {
             throw new AppException(ErrorCode.Email_ALREADY_EXISTS);
         }
         PasswordEncoder passwordEncoder = new BCryptPasswordEncoder(10);
-
-
+        Role role = roleService.findRole(Role.RoleName.USER);
+        if (role == null) {
+            role = roleService.createRole(Role.RoleName.USER);
+        }
         User user = new User();
         user.setEmail(userRegistrationDto.getEmail());
         user.setPasswordHash(passwordEncoder.encode(userRegistrationDto.getPassword()));
-        System.out.println("Password: " + passwordEncoder.encode(userRegistrationDto.getPassword()));
-//        user.setDisplayName(userRegistrationDto.getDisplayName());
-//        user.setAvatarUrl(userRegistrationDto.getAvatarUrl());
-//        user.setPhoneNumber(userRegistrationDto.getPhoneNumber());
-        //user.setPaymentInformation(userRegistrationDto.getPaymentInformation());
-        //user.setVerified(false); // Mặc định người dùng chưa được xác thực
-        Role role = roleService.findRole("AA");
-
-        if (role == null) {
-            role = roleService.createRole("AA");
-        }
         user.setRole(role); // Thiết lập vai trò mặc định
-
-
         user = userDao.save(user);
+        System.out.println("user: " + user.getId());
         return UserUtils.convertToDTO(user);
 
     }
@@ -76,7 +67,9 @@ public class UserServiceImpl implements UserService {
     @Override
     @PreAuthorize("hasRole('ADMIN')")
     public List<UserResponseDto> getAllUsers() {
-        log.info("Not into this method if not admin");
+        var authentication = SecurityContextHolder.getContext().getAuthentication(); //lay toan bo thong tin cua user dang dang nhap
+        log.info("email: {}", authentication.getName());
+        log.info("role: {}", authentication.getAuthorities().stream().findFirst().map(GrantedAuthority::getAuthority).get()); //lay ra role cua user dang dang nhap
         return userDao.findAll(Collections.emptyMap()).stream().map(UserUtils::convertToDTO).collect(Collectors.toList());
     }
 
@@ -87,15 +80,13 @@ public class UserServiceImpl implements UserService {
         return UserUtils.convertToDTO(user);
     }
 
-    private static final Logger logger = LoggerFactory.getLogger(UserService.class);
+
+
     @Override
     @Transactional
     public UserResponseDto updateUser(String id, UserUpdateOrDeleteDto userUpdateOrDeleteDto) {
-        logger.info("Updating user in service layer. ID: {}", id);
         return userDao.findById(UUID.fromString(id)).map(user -> {
-            logger.debug("Found user: {}", user);
             User savedUser = userDao.save(user);
-            logger.info("User saved to database: {}", savedUser);
             return UserUtils.convertToDTO(savedUser);
 
         }).orElseThrow(() -> new AppException(ErrorCode.USER_NOT_FOUND));

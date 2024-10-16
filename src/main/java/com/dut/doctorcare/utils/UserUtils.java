@@ -8,9 +8,7 @@ public class UserUtils {
         UserResponseDto dto = new UserResponseDto();
         dto.setId(user.getId().toString());
         dto.setEmail(user.getEmail());
-
-        //dto.setPaymentInformation(user.getPaymentInformation());
-        dto.setRoleName(user.getRole().getRoleName()) ;
+        dto.setRoleName(user.getRole().getRoleName().name()) ;
 
         //dto.setVerified(user.getVerified());
         return dto;

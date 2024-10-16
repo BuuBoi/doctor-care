@@ -17,11 +17,15 @@ import java.util.Set;
 @Entity
 @Table(name = "roles")
 public class Role extends BaseClazz {
-
+	@Enumerated(EnumType.STRING)
 	@Column(name = "role_name", nullable = false, unique = true)
-	private String roleName;
+	private RoleName roleName;
 
 	@OneToMany(mappedBy = "role")
 	private List<User> users = new ArrayList<>();
+
+	public enum RoleName {
+		ADMIN, DOCTOR, USER
+	}
 
 }

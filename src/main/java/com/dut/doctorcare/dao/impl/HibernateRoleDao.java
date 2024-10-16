@@ -16,14 +16,14 @@ public class HibernateRoleDao extends AbstractSoftDeleteHibernateDao<Role> imple
     // Implement additional Role-specific methods here if needed
 
     @Override
-    public Role findRole(String roleName) {
+    public Role findRole(Role.RoleName roleName) {
         return getCurrentSession().createQuery("from Role where roleName = :roleName", Role.class)
                 .setParameter("roleName", roleName)
                 .uniqueResult();
     }
 
     @Override
-    public Role createRole(String roleName) {
+    public Role createRole(Role.RoleName roleName) {
         // Tìm role dựa trên roleName
         String hql = "FROM Role WHERE roleName = :roleName";
         Query<Role> query = getCurrentSession().createQuery(hql, Role.class);
