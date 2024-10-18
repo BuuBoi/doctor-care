@@ -9,7 +9,8 @@ import com.dut.doctorcare.exception.EntityOperationException;
 import java.util.List;
 
 public interface UserService {
-    UserResponseDto addUser(UserRegistrationDto userRegistrationDto);
+    UserResponseDto registerDoctor(UserRegistrationDto userRegistrationDto);
+    UserResponseDto registerPatient(UserRegistrationDto userRegistrationDto);
 //    void deleteUser(String username);
 //    void updateUser(String username, String password);
 //    void getUser(String username);

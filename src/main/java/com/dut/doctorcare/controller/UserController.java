@@ -26,13 +26,22 @@ public class UserController {
     }
 
     @PostMapping
-    public ApiResponse<UserResponseDto> register(@RequestBody @Valid UserRegistrationDto userRegistrationDto) {
+    @RequestMapping("/register")
+    public ApiResponse<UserResponseDto> registerPatient(@RequestBody @Valid UserRegistrationDto userRegistrationDto) {
         ApiResponse<UserResponseDto> response = new ApiResponse<>();
         response.setStatus(HttpStatus.OK.value());
-        response.setData(userService.addUser(userRegistrationDto));
+        response.setData(userService.registerPatient(userRegistrationDto));
         return response;
-
     }
+    @PostMapping
+    @RequestMapping("/register/doctor")
+    public ApiResponse<UserResponseDto> registerDoctor(@RequestBody @Valid UserRegistrationDto userRegistrationDto) {
+        ApiResponse<UserResponseDto> response = new ApiResponse<>();
+        response.setStatus(HttpStatus.OK.value());
+        response.setData(userService.registerDoctor(userRegistrationDto));
+        return response;
+    }
+
 
     @GetMapping
     public ApiResponse<List<UserResponseDto>> getAllUsers() {
@@ -49,6 +58,14 @@ public class UserController {
         response.setData(userService.getUser(id));
         return response;
     }
+    @GetMapping("/my-profile")
+    public ApiResponse<UserResponseDto> getMyInfo() {
+        ApiResponse<UserResponseDto> response = new ApiResponse<>();
+        response.setStatus(200);
+        response.setData(userService.getMyProfile());
+        return response;
+    }
+
     @PutMapping("/{id}")
     public ApiResponse<UserResponseDto> updateUser(@PathVariable String id, @RequestBody @Valid UserUpdateOrDeleteDto userUpdateOrDeleteDto) {
         ApiResponse<UserResponseDto> response = new ApiResponse<>();
@@ -75,11 +92,4 @@ public class UserController {
         return response;
     }
 
-    @GetMapping("/my-profile")
-    public ApiResponse<UserResponseDto> getMyProfile() {
-        ApiResponse<UserResponseDto> response = new ApiResponse<>();
-        response.setStatus(200);
-        response.setData(userService.getMyProfile());
-        return response;
-    }
 }

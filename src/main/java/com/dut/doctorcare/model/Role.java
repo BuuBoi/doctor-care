@@ -5,9 +5,7 @@ import lombok.*;
 import lombok.experimental.SuperBuilder;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 @Getter
 @Setter
@@ -25,7 +23,7 @@ public class Role extends BaseClazz {
 	private List<User> users = new ArrayList<>();
 
 	public enum RoleName {
-		ADMIN, DOCTOR, USER
+		ADMIN, DOCTOR, PATIENT
 	}
 
 }

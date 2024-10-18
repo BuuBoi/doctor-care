@@ -10,9 +10,8 @@ import java.util.List;
 
 @Getter
 @Setter
-@NoArgsConstructor
 @AllArgsConstructor
 public class PatientResponse extends UserBaseDto {
-    private List<HistoryMedicalResponse> historyMedicalResponses;
-    private List<AppointmentResponse> appointmentResponses;
+    //private List<HistoryMedicalResponse> historyMedicalResponses;
+    //private List<AppointmentResponse> appointmentResponses;
 }

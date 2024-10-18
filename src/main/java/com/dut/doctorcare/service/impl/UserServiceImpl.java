@@ -8,6 +8,7 @@ import com.dut.doctorcare.dto.response.UserResponseDto;
 import com.dut.doctorcare.exception.AppException;
 import com.dut.doctorcare.exception.EntityOperationException;
 import com.dut.doctorcare.exception.ErrorCode;
+import com.dut.doctorcare.mapper.UserMapper;
 import com.dut.doctorcare.model.Role;
 import com.dut.doctorcare.model.User;
 import com.dut.doctorcare.service.iface.RoleService;
@@ -15,8 +16,6 @@ import com.dut.doctorcare.service.iface.UserService;
 import com.dut.doctorcare.utils.UserUtils;
 import jakarta.transaction.Transactional;
 import lombok.extern.slf4j.Slf4j;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PostAuthorize;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -37,30 +36,46 @@ import java.util.stream.Collectors;
 public class UserServiceImpl implements UserService {
     private final UserDao userDao;
     private final RoleService roleService;
+    private final PasswordEncoder passwordEncoder;
+    private final UserMapper userMapper;
 
     @Autowired
-    public UserServiceImpl(UserDao userDao, RoleService roleService) {
+    public UserServiceImpl(UserDao userDao, RoleService roleService, PasswordEncoder passwordEncoder, UserMapper userMapper) {
         this.userDao = userDao;
         this.roleService = roleService;
+        this.passwordEncoder = passwordEncoder;
+        this.userMapper = userMapper;
     }
 
     @Override
-    public UserResponseDto addUser(UserRegistrationDto userRegistrationDto) {
+    public UserResponseDto registerDoctor(UserRegistrationDto userRegistrationDto) {
         if (userDao.findByEmail(userRegistrationDto.getEmail()).isPresent()) {
             throw new AppException(ErrorCode.Email_ALREADY_EXISTS);
         }
-        PasswordEncoder passwordEncoder = new BCryptPasswordEncoder(10);
-        Role role = roleService.findRole(Role.RoleName.USER);
+         User user = new User();
+        Role role = roleService.findRole(Role.RoleName.DOCTOR);
         if (role == null) {
-            role = roleService.createRole(Role.RoleName.USER);
+            role = roleService.createRole(Role.RoleName.DOCTOR);
+        }
+        user = userMapper.toUser(userRegistrationDto);
+        user.setRole(role);
+        user = userDao.save(user);
+        return userMapper.toUserResponseDto(user);
+    }
+    @Override
+    public UserResponseDto registerPatient(UserRegistrationDto userRegistrationDto) {
+        if (userDao.findByEmail(userRegistrationDto.getEmail()).isPresent()) {
+            throw new AppException(ErrorCode.Email_ALREADY_EXISTS);
+        }
+        Role role = roleService.findRole(Role.RoleName.PATIENT);
+        if (role == null) {
+            role = roleService.createRole(Role.RoleName.PATIENT);
         }
         User user = new User();
-        user.setEmail(userRegistrationDto.getEmail());
-        user.setPasswordHash(passwordEncoder.encode(userRegistrationDto.getPassword()));
+        user = userMapper.toUser(userRegistrationDto);
         user.setRole(role); // Thiết lập vai trò mặc định
         user = userDao.save(user);
-        System.out.println("user: " + user.getId());
-        return UserUtils.convertToDTO(user);
+        return userMapper.toUserResponseDto(user);
 
     }
 
@@ -73,6 +88,7 @@ public class UserServiceImpl implements UserService {
         return userDao.findAll(Collections.emptyMap()).stream().map(UserUtils::convertToDTO).collect(Collectors.toList());
     }
 
+    //dam bao ren user chi lay duoc thong tin cua chinh minh hoac la admin
     @PostAuthorize("returnObject.email == authentication.getName() || hasRole('ADMIN')")
     @Override
     public UserResponseDto getUser(String id) {
@@ -80,6 +96,16 @@ public class UserServiceImpl implements UserService {
         return UserUtils.convertToDTO(user);
     }
 
+    //lay thong tin user dang dang nhap ma khong can truyen id
+    //sau khi dang nhap thanh cong thi info dc luu tru trong security context
+    @Transactional
+    @Override
+    public UserResponseDto getMyProfile() {
+        var context = SecurityContextHolder.getContext();
+        var email = context.getAuthentication().getName();
+        User user = userDao.findByEmail(email).orElseThrow(() -> new AppException(ErrorCode.USER_NOT_FOUND));
+        return UserUtils.convertToDTO(user);
+    }
 
 
     @Override
@@ -100,14 +126,7 @@ public class UserServiceImpl implements UserService {
         userDao.update(user);
     }
 
-    @Transactional
-    @Override
-    public UserResponseDto getMyProfile() {
-        var context = SecurityContextHolder.getContext();
-        var email = context.getAuthentication().getName();
-        User user = userDao.findByEmail(email).orElseThrow(() -> new AppException(ErrorCode.USER_NOT_FOUND));
-        return UserUtils.convertToDTO(user);
-    }
+
 
     @Transactional
     public void changePassword(String userId, PasswordChangeDto passwordChangeDto) {

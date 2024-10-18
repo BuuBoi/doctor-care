@@ -22,7 +22,7 @@ public enum ErrorCode {
     UNCATEGORIZED_EXCEPTION(9999, "Uncatalogued error.", HttpStatus.INTERNAL_SERVER_ERROR),
     INVALID_KEY(1000, "Invalid key.",HttpStatus.BAD_REQUEST), //kiem tra Key hop le
     UNAUTHENTICATED(8888, "Unauthenticated.",HttpStatus.UNAUTHORIZED),
-    UNAUTHORIZED(7777, "Unauthorized.",HttpStatus.FORBIDDEN),
+    UNAUTHORIZED(7777, "you do not have permission.",HttpStatus.FORBIDDEN),
     ;
 
     private int code;
