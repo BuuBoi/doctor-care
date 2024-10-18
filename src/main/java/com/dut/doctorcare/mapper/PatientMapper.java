@@ -9,22 +9,18 @@ import org.mapstruct.MappingTarget;
 
 @Mapper(componentModel = "spring", uses = {AddressMapper.class, CustomeMapper.class})
 public interface PatientMapper {
-    @Mapping(target = "gender", source = "gender")
+    @Mapping(target = "gender", source = "gender", qualifiedByName = "stringToGender")
+    @Mapping(target = "dateOfBirth", source = "dateOfBirth", qualifiedByName = "stringToLocalDate")
+    @Mapping(target = "address", source = "addressDto", ignore = true)
     Patient toPatient(PatientRequest patientRequest);
 
-    @Mapping(target = "gender", source = "gender")
+    @Mapping(target = "gender", source = "gender", qualifiedByName = "genderToString")
+    @Mapping(target = "dateOfBirth", source = "dateOfBirth", qualifiedByName = "localDateToString")
+    @Mapping(target = "addressDto", source = "address")
     PatientResponse toPatientResponse(Patient patient);
 
-    default Patient.Gender stringToGender(String gender) {
-        if (gender != null) {
-            return Patient.Gender.valueOf(gender.toUpperCase()); // Chuyển đổi chuỗi thành enum
-        }
-        return null;
-    }
-
-    default String genderToString(Patient.Gender gender) {
-        return gender != null ? gender.name() : null; // Chuyển đổi enum thành chuỗi
-    }
-
+    @Mapping(target = "id", ignore = true)
+    @Mapping(target = "address", ignore = true)
+    @Mapping(target = "gender", source = "gender", qualifiedByName = "stringToGender")
     void updatePatientFromDto(PatientRequest patientRequest, @MappingTarget Patient patient);
 }

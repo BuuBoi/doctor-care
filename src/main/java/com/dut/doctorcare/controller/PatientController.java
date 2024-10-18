@@ -16,8 +16,8 @@ public class PatientController {
     private final PatientService patientService;
 
     @PostMapping
-    public ApiResponse<PatientResponse> addPatient(@RequestBody PatientRequest patientRequest) {
-        log.info("addPatient: ");
+    @RequestMapping("/profile")
+    public ApiResponse<PatientResponse> addPatientProfile(@RequestBody PatientRequest patientRequest) {
         PatientResponse patientResponse = patientService.saveOrUpdate(patientRequest);
         return ApiResponse.<PatientResponse>builder()
                 .status(200)

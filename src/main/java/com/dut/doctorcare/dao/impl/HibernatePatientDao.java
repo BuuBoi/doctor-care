@@ -15,4 +15,15 @@ public class HibernatePatientDao extends AbstractSoftDeleteHibernateDao<Patient>
     public HibernatePatientDao() {
         super(Patient.class);
     }
+
+    @Override
+    public Patient saveOrUpdate(Patient patient) {
+        if(patient.getId() == null) {
+            return save(patient);
+        } else {
+            return update(patient);
+        }
+
+    }
+
 }
