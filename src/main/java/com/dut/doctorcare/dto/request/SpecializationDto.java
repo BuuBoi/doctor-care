@@ -8,5 +8,6 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 public class SpecializationDto {
+    private String id;
     private String name;
 }

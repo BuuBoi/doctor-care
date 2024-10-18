@@ -23,6 +23,7 @@ public enum ErrorCode {
     INVALID_KEY(1000, "Invalid key.",HttpStatus.BAD_REQUEST), //kiem tra Key hop le
     UNAUTHENTICATED(8888, "Unauthenticated.",HttpStatus.UNAUTHORIZED),
     UNAUTHORIZED(7777, "you do not have permission.",HttpStatus.FORBIDDEN),
+    DATABASE_OPERATION_FAILED(5555, "Database operation failed", HttpStatus.INTERNAL_SERVER_ERROR),
     ;
 
     private int code;

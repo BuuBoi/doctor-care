@@ -56,35 +56,15 @@ public class PatientServiceImpl implements PatientService {
                 }
                 return patientMapper.toPatientResponse(patientDao.update(patient));
             }
-//            Patient patient = patientMapper.toPatient(patientRequest);
-//            Address address = addressMapper.toAddress(patientRequest.getAddressDto());
-//            address = addressDao.save(address);
-//            patient.setAddress(address);
-//            patient.setUser(user);
 
-//                if(patientRequest.getId() == null || patientRequest.getId().isEmpty()) {
-//                    patient =  patientMapper.toPatient(patientRequest);
-//                    AddressDto addressDto = patientRequest.getAddressDto();
-//                    Address address = addressDao.save(addressMapper.toAddress(addressDto));
-//                    patient.setAddress(address);
-//                    patient.setUser(user);
-//                    patientDao.save(patient);
-//                }else {
-//                    patient = patientDao.findById(UUID.fromString(patientRequest.getId()))
-//                            .orElseThrow(() -> new AppException(ErrorCode.USER_NOT_FOUND));
-//                    patientMapper.updatePatientFromDto(patientRequest, patient);
-//                    Address address = patient.getAddress();
-//                    if(address.getProvince().equals(patientRequest.getAddressDto().getProvince())  ||
-//                            address.getDistrict().equals(patientRequest.getAddressDto().getDistrict()) ||
-//                            address.getWard().equals(patientRequest.getAddressDto().getWard()) ||
-//                            address.getDetails().equals(patientRequest.getAddressDto().getDetails())) {
-//                       address = addressDao.update(addressMapper.toAddress(patientRequest.getAddressDto()));
-//                        patient.setAddress(address);
-//                        patientDao.update(patient);
-//                    }
-//                }
-//
-//                return patientMapper.toPatientResponse(patient);
+
         }
-
+    @Override
+    public PatientResponse getMyInfo() {
+        var context = SecurityContextHolder.getContext();
+        var email = context.getAuthentication().getName();
+        User user = userDao.findByEmail(email).orElseThrow(() -> new AppException(ErrorCode.USER_NOT_FOUND));
+        Patient patient = patientDao.findById(user.getId()).orElseThrow(() -> new AppException(ErrorCode.USER_NOT_FOUND));
+        return patientMapper.toPatientResponse(patient);
+    }
 }

@@ -5,4 +5,5 @@ import com.dut.doctorcare.dto.response.PatientResponse;
 
 public interface PatientService {
     PatientResponse saveOrUpdate(PatientRequest patientRequest);
+    PatientResponse getMyInfo();
 }

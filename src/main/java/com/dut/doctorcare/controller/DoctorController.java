@@ -10,9 +10,9 @@ import org.springframework.web.bind.annotation.*;
 
 @Slf4j
 @RestController
-@RequestMapping("/api/patients")
+@RequestMapping("/api/doctors")
 @RequiredArgsConstructor
-public class PatientController {
+public class DoctorController {
     private final PatientService patientService;
 
     @PostMapping
