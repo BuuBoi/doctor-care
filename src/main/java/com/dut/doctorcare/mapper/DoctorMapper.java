@@ -13,16 +13,20 @@ public interface DoctorMapper {
     @Mapping(target = "dateOfBirth", source = "dateOfBirth", qualifiedByName = "stringToLocalDate")
     @Mapping(target = "address", source = "addressDto", ignore = true)
     @Mapping(target = "specialization", ignore = true)
+    @Mapping(target = "phone", source = "phoneNumber")
     Doctor toDoctor(DoctorRequest doctorRequest);
 
     @Mapping(target = "gender", source = "gender", qualifiedByName = "genderToString")
     @Mapping(target = "dateOfBirth", source = "dateOfBirth", qualifiedByName = "localDateToString")
     @Mapping(target = "addressDto", source = "address")
     @Mapping(target = "specializationDto", source = "specialization")
+    @Mapping(target = "phoneNumber", source = "phone")
     DoctorResponse toDoctorResponse(Doctor doctor);
 
     @Mapping(target = "id", ignore = true)
     @Mapping(target = "address", ignore = true)
+    @Mapping(target = "specialization", ignore = true)
     @Mapping(target = "gender", source = "gender", qualifiedByName = "stringToGender")
+    @Mapping(target = "phone", source = "phoneNumber")
     void updateDoctorFromDto(DoctorRequest doctorRequest, @MappingTarget Doctor doctor);
 }

@@ -1,8 +1,11 @@
 package com.dut.doctorcare.controller;
 
+import com.dut.doctorcare.dto.request.DoctorRequest;
 import com.dut.doctorcare.dto.request.PatientRequest;
 import com.dut.doctorcare.dto.response.ApiResponse;
+import com.dut.doctorcare.dto.response.DoctorResponse;
 import com.dut.doctorcare.dto.response.PatientResponse;
+import com.dut.doctorcare.service.iface.DoctorService;
 import com.dut.doctorcare.service.iface.PatientService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -13,23 +16,23 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/api/doctors")
 @RequiredArgsConstructor
 public class DoctorController {
-    private final PatientService patientService;
+    private final DoctorService doctorService;
 
     @PostMapping
     @RequestMapping("/profile")
-    public ApiResponse<PatientResponse> addPatientProfile(@RequestBody PatientRequest patientRequest) {
-        PatientResponse patientResponse = patientService.saveOrUpdate(patientRequest);
-        return ApiResponse.<PatientResponse>builder()
+    public ApiResponse<DoctorResponse> saveOrUpdate(@RequestBody DoctorRequest request) {
+        DoctorResponse doctorResponse = doctorService.saveOrUpdate(request);
+        return ApiResponse.<DoctorResponse>builder()
                 .status(200)
-                .data(patientResponse)
+                .data(doctorResponse)
                 .build();
     }
     @GetMapping("/profile")
-    public ApiResponse<PatientResponse> getMyInfo(){
-        PatientResponse patientResponse = patientService.getMyInfo();
-        return ApiResponse.<PatientResponse>builder()
+    public ApiResponse<DoctorResponse> getMyInfo(){
+        DoctorResponse doctorResponse = doctorService.getMyInfo();
+        return ApiResponse.<DoctorResponse>builder()
                 .status(200)
-                .data(patientResponse)
+                .data(doctorResponse)
                 .build();
     }
 
