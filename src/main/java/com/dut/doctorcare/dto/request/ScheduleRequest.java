@@ -1,4 +1,4 @@
-package com.dut.doctorcare.dto.response;
+package com.dut.doctorcare.dto.request;
 
 import com.dut.doctorcare.model.Schedule;
 import com.dut.doctorcare.model.Shifts;
@@ -12,14 +12,16 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.time.LocalDate;
+import java.util.List;
 
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class ScheduleResponse {
+public class ScheduleRequest {
     private String id;
+
     private String date;
-    private String status;
-    private ShiftsResponse shifts;
+
+    private List<ShiftsRequest> shifts;
 }

@@ -31,4 +31,10 @@ public class User extends BaseClazz {
 	@ManyToOne
 	@JoinColumn(name = "role_id", nullable = false)
 	private Role role;
+
+	@OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
+	private Patient patient;
+
+	@OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
+	private Doctor doctor;
 }

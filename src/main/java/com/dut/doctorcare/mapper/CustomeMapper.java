@@ -2,6 +2,7 @@ package com.dut.doctorcare.mapper;
 
 import com.dut.doctorcare.model.Patient;
 import com.dut.doctorcare.model.Role;
+import com.dut.doctorcare.model.Schedule;
 import org.mapstruct.Named;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -64,4 +65,10 @@ public class CustomeMapper {
     public String roleToString(Role.RoleName role) {
         return role.name();
     }
+
+    @Named("statusToString")
+    public String statusToString(Schedule.Status status) {
+        return status.name();
+    }
+
 }
