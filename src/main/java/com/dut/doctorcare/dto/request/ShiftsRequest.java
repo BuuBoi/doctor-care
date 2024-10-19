@@ -1,4 +1,4 @@
-package com.dut.doctorcare.dto.response;
+package com.dut.doctorcare.dto.request;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -9,7 +9,7 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class ShiftsResponse {
+public class ShiftsRequest {
     private String id;
     private String shiftName;
 }
