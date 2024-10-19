@@ -101,7 +101,6 @@ public abstract class AbstractHibernateDao<T extends BaseClazz> implements Gener
             Session session = getCurrentSession();
             session.remove(entity);
             session.flush();
-
     }
 
 

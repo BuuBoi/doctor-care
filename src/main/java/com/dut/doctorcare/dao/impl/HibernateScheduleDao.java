@@ -6,6 +6,7 @@ import com.dut.doctorcare.model.Schedule;
 import com.dut.doctorcare.model.Shifts;
 import org.springframework.stereotype.Repository;
 
+import java.time.LocalDate;
 import java.util.List;
 import java.util.UUID;
 
@@ -14,5 +15,12 @@ public class HibernateScheduleDao extends AbstractSoftDeleteHibernateDao<Schedul
     public HibernateScheduleDao() {
         super(Schedule.class);
     }
-
+    @Override
+    public List<Schedule> findAllExpiredSchedules(LocalDate today) {
+        String query = "SELECT s FROM Schedule s WHERE s.date < :today AND s.isActive = true AND s.status = :status";
+        return entityManager.createQuery(query, Schedule.class)
+                .setParameter("today", today)
+                .setParameter("status", Schedule.Status.EMPTY)
+                .getResultList();
+    }
 }
