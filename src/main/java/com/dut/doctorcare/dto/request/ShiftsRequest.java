@@ -12,4 +12,5 @@ import lombok.Setter;
 public class ShiftsRequest {
     private String id;
     private String shiftName;
+    private boolean scheduled;
 }

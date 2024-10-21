@@ -10,4 +10,5 @@ import java.util.List;
 public interface ScheduleDao extends GenericDao<Schedule>, SoftDeleteDao<Schedule> {
     List<Schedule> findAllExpiredSchedules(LocalDate today);
     List<Schedule> findAllByDate(LocalDate date);
+    void deleteAll(List<Schedule> schedules);
 }

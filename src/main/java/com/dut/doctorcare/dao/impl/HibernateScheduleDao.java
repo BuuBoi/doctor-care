@@ -18,7 +18,7 @@ public class HibernateScheduleDao extends AbstractSoftDeleteHibernateDao<Schedul
     @Override
     public List<Schedule> findAllExpiredSchedules(LocalDate today) {
         String query = "SELECT s FROM Schedule s WHERE s.date < :today AND s.isActive = true AND s.status = :status";
-        return entityManager.createQuery(query, Schedule.class)
+        return getCurrentSession().createQuery(query, Schedule.class)
                 .setParameter("today", today)
                 .setParameter("status", Schedule.Status.EMPTY)
                 .getResultList();
@@ -26,8 +26,15 @@ public class HibernateScheduleDao extends AbstractSoftDeleteHibernateDao<Schedul
     @Override
     public List<Schedule> findAllByDate(LocalDate date) {
         String query = "SELECT s FROM Schedule s WHERE s.date = :date AND s.isActive = true";
-        return entityManager.createQuery(query, Schedule.class)
+        return getCurrentSession().createQuery(query, Schedule.class)
                 .setParameter("date", date)
                 .getResultList();
+    }
+    @Override
+    public void deleteAll(List<Schedule> schedules) {
+        schedules.forEach(schedule -> {
+            getCurrentSession().remove(schedule);
+            getCurrentSession().flush();
+        });
     }
 }

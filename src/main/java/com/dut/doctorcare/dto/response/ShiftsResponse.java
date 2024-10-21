@@ -13,4 +13,5 @@ public class ShiftsResponse {
     private String id;
     private String shiftName;
     private boolean scheduled;
+    private boolean hasAppointment;
 }
