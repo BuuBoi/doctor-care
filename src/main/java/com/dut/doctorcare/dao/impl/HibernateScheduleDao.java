@@ -23,4 +23,11 @@ public class HibernateScheduleDao extends AbstractSoftDeleteHibernateDao<Schedul
                 .setParameter("status", Schedule.Status.EMPTY)
                 .getResultList();
     }
+    @Override
+    public List<Schedule> findAllByDate(LocalDate date) {
+        String query = "SELECT s FROM Schedule s WHERE s.date = :date AND s.isActive = true";
+        return entityManager.createQuery(query, Schedule.class)
+                .setParameter("date", date)
+                .getResultList();
+    }
 }

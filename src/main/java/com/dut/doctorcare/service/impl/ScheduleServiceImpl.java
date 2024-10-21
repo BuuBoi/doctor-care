@@ -6,6 +6,7 @@ import com.dut.doctorcare.dao.iface.UserDao;
 import com.dut.doctorcare.dto.request.ScheduleRequest;
 import com.dut.doctorcare.dto.request.ShiftsRequest;
 import com.dut.doctorcare.dto.response.ScheduleResponse;
+import com.dut.doctorcare.dto.response.ShiftsResponse;
 import com.dut.doctorcare.exception.AppException;
 import com.dut.doctorcare.exception.ErrorCode;
 import com.dut.doctorcare.mapper.ScheduleMapper;
@@ -20,8 +21,8 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.List;
-import java.util.UUID;
+import java.time.LocalDate;
+import java.util.*;
 import java.util.stream.Collectors;
 
 @Service
@@ -39,10 +40,10 @@ public class ScheduleServiceImpl implements ScheduleService {
         var context = SecurityContextHolder.getContext();
         User user = userDao.findByEmail(context.getAuthentication().getName()).orElseThrow(() ->new AppException(ErrorCode.USER_NOT_FOUND));
         Doctor doctor = user.getDoctor();
-        Schedule schedule = scheduleMapper.toSchedule(request);
         List<UUID> IdShifts = request.getShifts().stream().map(ShiftsRequest::getId).map(UUID::fromString).toList();
         List<Shifts> shifts = shiftsDao.findAllByIds(IdShifts);
         List<ScheduleResponse> schedules = shifts.stream().map(shift ->{
+            Schedule schedule = scheduleMapper.toSchedule(request);
             schedule.setShifts(shift);
             schedule.setStatus(Schedule.Status.EMPTY);
             schedule.setDoctor(doctor);
@@ -50,5 +51,26 @@ public class ScheduleServiceImpl implements ScheduleService {
         }).toList().stream().map(scheduleMapper::toScheduleResponse).toList();
 
         return schedules;
+    }
+    @Override
+    public List<ShiftsResponse> getShiftsAvailable(LocalDate date) {
+        Map<String, Object> predicate = new HashMap<>();
+        List<Shifts> allShifts = shiftsDao.findAll(predicate);
+        List<Schedule> schedules = scheduleDao.findAllByDate(date);
+        List<Shifts> shifts1 = schedules.stream().map(Schedule::getShifts).toList();
+        List<ShiftsResponse> shiftsResponses = new ArrayList<>();
+        shiftsResponses = allShifts.stream().map(
+                shifts -> {
+                    ShiftsResponse shiftsResponse = new ShiftsResponse();
+                    shiftsResponse = shiftsMapper.toShiftsResponse(shifts);
+                    if (shifts1.contains(shifts)) {
+                        shiftsResponse.setScheduled(true);
+                    } else {
+                        shiftsResponse.setScheduled(false);
+                    }
+                    return shiftsResponse;
+                }
+        ).toList();
+        return shiftsResponses;
     }
 }

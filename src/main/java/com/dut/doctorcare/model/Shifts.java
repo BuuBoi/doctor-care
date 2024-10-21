@@ -23,6 +23,6 @@ import java.util.List;
 public class Shifts extends BaseClazz {
     private String shiftName;
 
-    @OneToOne(mappedBy = "shifts")
-    private Schedule schedules;
+    @OneToMany(mappedBy = "shifts")
+    private List<Schedule> schedules;
 }

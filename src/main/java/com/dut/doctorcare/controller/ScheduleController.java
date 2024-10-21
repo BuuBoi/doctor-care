@@ -3,13 +3,12 @@ package com.dut.doctorcare.controller;
 import com.dut.doctorcare.dto.request.ScheduleRequest;
 import com.dut.doctorcare.dto.response.ApiResponse;
 import com.dut.doctorcare.dto.response.ScheduleResponse;
+import com.dut.doctorcare.dto.response.ShiftsResponse;
 import com.dut.doctorcare.service.iface.ScheduleService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDate;
 import java.util.List;
 
 @RestController
@@ -23,6 +22,15 @@ public class ScheduleController {
         return ApiResponse.<List<ScheduleResponse>>builder()
                 .status(200)
                 .data(scheduleResponses)
+                .build();
+    }
+    @GetMapping("/shifts-available")
+    public ApiResponse<List<ShiftsResponse>> getShiftsAvailable(@RequestParam String date) {
+        LocalDate localDate = LocalDate.parse(date);
+        List<ShiftsResponse> shiftsResponses = scheduleService.getShiftsAvailable(localDate);
+        return ApiResponse.<List<ShiftsResponse>>builder()
+                .status(200)
+                .data(shiftsResponses)
                 .build();
     }
 

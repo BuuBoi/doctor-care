@@ -22,7 +22,7 @@ public class Schedule extends BaseClazz{
     @Enumerated(EnumType.STRING)
     private Status status;
 
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name = "shift_id")
     private Shifts shifts;
 

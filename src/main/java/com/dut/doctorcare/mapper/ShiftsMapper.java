@@ -8,5 +8,6 @@ import org.mapstruct.Mapping;
 @Mapper(componentModel = "spring", uses = {CustomeMapper.class})
 public interface ShiftsMapper {
     @Mapping(target = "id", source = "id",  qualifiedByName = "uUIDToString")
+    @Mapping(target = "scheduled", ignore = true)
     ShiftsResponse toShiftsResponse(Shifts shifts);
 }
