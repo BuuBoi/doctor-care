@@ -33,5 +33,14 @@ public class ScheduleController {
                 .data(shiftsResponses)
                 .build();
     }
+    @GetMapping
+    public ApiResponse<List<ScheduleResponse>> getScheduleByDate(@RequestParam String date) {
+        LocalDate localDate = LocalDate.parse(date);
+        List<ScheduleResponse> scheduleResponses = scheduleService.getScheduleByDate(localDate);
+        return ApiResponse.<List<ScheduleResponse>>builder()
+                .status(200)
+                .data(scheduleResponses)
+                .build();
+    }
 
 }

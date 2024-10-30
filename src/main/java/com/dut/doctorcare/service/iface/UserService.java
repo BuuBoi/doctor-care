@@ -1,15 +1,17 @@
 package com.dut.doctorcare.service.iface;
 
+import com.dut.doctorcare.dto.request.CreateDoctorRequest;
 import com.dut.doctorcare.dto.request.PasswordChangeDto;
 import com.dut.doctorcare.dto.request.UserRegistrationDto;
 import com.dut.doctorcare.dto.request.UserUpdateOrDeleteDto;
+import com.dut.doctorcare.dto.response.DoctorResponse;
 import com.dut.doctorcare.dto.response.UserResponseDto;
 import com.dut.doctorcare.exception.EntityOperationException;
 
 import java.util.List;
 
 public interface UserService {
-    UserResponseDto registerDoctor(UserRegistrationDto userRegistrationDto);
+    DoctorResponse registerDoctor(CreateDoctorRequest request);
     UserResponseDto registerPatient(UserRegistrationDto userRegistrationDto);
 //    void deleteUser(String username);
 //    void updateUser(String username, String password);

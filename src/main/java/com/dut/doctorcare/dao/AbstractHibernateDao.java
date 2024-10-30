@@ -80,16 +80,6 @@ public abstract class AbstractHibernateDao<T extends BaseClazz> implements Gener
             return entity;
     }
 
-//    public T save(T entity) throws EntityOperationException {
-//        try {
-//            getCurrentSession().persist(entity);
-//            return entity;
-//        } catch (HibernateException e) {
-//            throw new EntityOperationException("Error during save operation", e);
-//        }
-//    }
-
-
     @Override
     public T update(T entity){
             getCurrentSession().merge(entity);

@@ -3,10 +3,10 @@ package com.dut.doctorcare.service.impl;
 import com.dut.doctorcare.dao.iface.AddressDao;
 import com.dut.doctorcare.dao.iface.PatientDao;
 import com.dut.doctorcare.dao.iface.UserDao;
-import com.dut.doctorcare.dto.request.AddressDto;
 import com.dut.doctorcare.dto.request.PatientRequest;
 import com.dut.doctorcare.dto.response.PatientResponse;
 import com.dut.doctorcare.exception.AppException;
+import com.dut.doctorcare.exception.EntityOperationException;
 import com.dut.doctorcare.exception.ErrorCode;
 import com.dut.doctorcare.mapper.AddressMapper;
 import com.dut.doctorcare.mapper.PatientMapper;
@@ -19,6 +19,9 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import java.util.UUID;
 
 @Service
@@ -66,5 +69,29 @@ public class PatientServiceImpl implements PatientService {
         User user = userDao.findByEmail(email).orElseThrow(() -> new AppException(ErrorCode.USER_NOT_FOUND));
         Patient patient = patientDao.findById(user.getId()).orElseThrow(() -> new AppException(ErrorCode.USER_NOT_FOUND));
         return patientMapper.toPatientResponse(patient);
+    }
+
+    @Override
+    public List<PatientResponse> getPatients() {
+            Map<String, Object> filterParams = new HashMap<>();
+        return patientDao.findAll(filterParams).stream()
+                .map(patientMapper::toPatientResponse)
+                .toList();
+    }
+
+    @Override
+    public PatientResponse getPatientById(String patientId) {
+        Patient patient = patientDao.findById(UUID.fromString(patientId)).orElseThrow(() -> new AppException(ErrorCode.USER_NOT_FOUND));
+        return patientMapper.toPatientResponse(patient);
+    }
+
+    @Override
+    public void deletePatient(String patientId)  {
+        patientDao.findById(UUID.fromString(patientId)).orElseThrow(() -> new AppException(ErrorCode.USER_NOT_FOUND));
+        try {
+            patientDao.softDelete(UUID.fromString(patientId));
+        } catch (EntityOperationException e) {
+            throw new AppException(ErrorCode.UNCATEGORIZED_EXCEPTION);
+        }
     }
 }

@@ -7,6 +7,7 @@ import java.math.BigDecimal;
 @Getter
 @Setter
 @AllArgsConstructor
+@NoArgsConstructor
 public class DoctorRequest extends UserBaseDto {
     private String position;
     private String bio;

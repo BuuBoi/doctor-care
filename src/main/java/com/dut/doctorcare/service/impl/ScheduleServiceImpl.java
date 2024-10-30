@@ -43,9 +43,6 @@ public class ScheduleServiceImpl implements ScheduleService {
                 .map(ShiftsRequest::getId).map(UUID::fromString).toList();
         List<Shifts> shifts = shiftsDao.findAllByIds(IdShifts);
         List<Schedule> existingSchedule = scheduleDao.findAllByDate(LocalDate.parse(request.getDate()));
-        for (Schedule schedule : existingSchedule) {
-            log.info("Existing schedule: {}", existingSchedule.get(0).getId());
-        }
         if(!existingSchedule.isEmpty()){
             scheduleDao.deleteAll(existingSchedule);
         }
@@ -86,5 +83,11 @@ public class ScheduleServiceImpl implements ScheduleService {
                 }
         ).toList();
         return shiftsResponses;
+    }
+
+    @Override
+    public List<ScheduleResponse> getScheduleByDate(LocalDate date) {
+        List<Schedule> schedules = scheduleDao.findAllByDate(date);
+        return schedules.stream().map(scheduleMapper::toScheduleResponse).toList();
     }
 }

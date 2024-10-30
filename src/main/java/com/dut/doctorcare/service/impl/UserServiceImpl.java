@@ -1,20 +1,29 @@
 package com.dut.doctorcare.service.impl;
 
+import com.dut.doctorcare.dao.iface.DoctorDao;
+import com.dut.doctorcare.dao.iface.SpecializationDao;
 import com.dut.doctorcare.dao.iface.UserDao;
+import com.dut.doctorcare.dto.request.CreateDoctorRequest;
 import com.dut.doctorcare.dto.request.PasswordChangeDto;
 import com.dut.doctorcare.dto.request.UserRegistrationDto;
 import com.dut.doctorcare.dto.request.UserUpdateOrDeleteDto;
+import com.dut.doctorcare.dto.response.DoctorResponse;
 import com.dut.doctorcare.dto.response.UserResponseDto;
 import com.dut.doctorcare.exception.AppException;
 import com.dut.doctorcare.exception.EntityOperationException;
 import com.dut.doctorcare.exception.ErrorCode;
+import com.dut.doctorcare.mapper.AddressMapper;
+import com.dut.doctorcare.mapper.DoctorMapper;
 import com.dut.doctorcare.mapper.UserMapper;
+import com.dut.doctorcare.model.Address;
+import com.dut.doctorcare.model.Doctor;
 import com.dut.doctorcare.model.Role;
 import com.dut.doctorcare.model.User;
 import com.dut.doctorcare.service.iface.RoleService;
 import com.dut.doctorcare.service.iface.UserService;
 import com.dut.doctorcare.utils.UserUtils;
 import jakarta.transaction.Transactional;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PostAuthorize;
@@ -33,34 +42,41 @@ import java.util.stream.Collectors;
 @Service
 @Slf4j
 @Transactional
+@RequiredArgsConstructor
 public class UserServiceImpl implements UserService {
     private final UserDao userDao;
+    private final DoctorDao doctorDao;
     private final RoleService roleService;
-    private final PasswordEncoder passwordEncoder;
+    private final AddressMapper addressMapper;
     private final UserMapper userMapper;
-
-    @Autowired
-    public UserServiceImpl(UserDao userDao, RoleService roleService, PasswordEncoder passwordEncoder, UserMapper userMapper) {
-        this.userDao = userDao;
-        this.roleService = roleService;
-        this.passwordEncoder = passwordEncoder;
-        this.userMapper = userMapper;
-    }
+    private final DoctorMapper doctorMapper;
+    private final SpecializationDao specializationDao;
 
     @Override
-    public UserResponseDto registerDoctor(UserRegistrationDto userRegistrationDto) {
-        if (userDao.findByEmail(userRegistrationDto.getEmail()).isPresent()) {
+    public DoctorResponse registerDoctor(CreateDoctorRequest request) {
+        if (userDao.findByEmail(request.getUserRegistrationDto().getEmail()).isPresent()) {
             throw new AppException(ErrorCode.Email_ALREADY_EXISTS);
         }
+        // Create user
          User user = new User();
         Role role = roleService.findRole(Role.RoleName.DOCTOR);
         if (role == null) {
             role = roleService.createRole(Role.RoleName.DOCTOR);
         }
-        user = userMapper.toUser(userRegistrationDto);
+        user = userMapper.toUser(request.getUserRegistrationDto());
         user.setRole(role);
         user = userDao.save(user);
-        return userMapper.toUserResponseDto(user);
+
+        // Create doctor
+        Doctor doctor = new Doctor();
+        doctor = doctorMapper.toDoctor(request);
+        doctor.setUser(user);
+        doctor.setAddress(addressMapper.toAddress(request.getAddressDto()));
+        doctor.setSpecialization(specializationDao.findById(UUID.fromString(request.getSpecializationDto().getId()))
+                .orElseThrow(() -> new AppException(ErrorCode.USER_NOT_FOUND)));
+        doctor = doctorDao.save(doctor);
+
+        return doctorMapper.toDoctorResponse(doctor);
     }
     @Override
     public UserResponseDto registerPatient(UserRegistrationDto userRegistrationDto) {

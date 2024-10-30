@@ -1,9 +1,11 @@
 package com.dut.doctorcare.controller;
 
+import com.dut.doctorcare.dto.request.CreateDoctorRequest;
 import com.dut.doctorcare.dto.request.PasswordChangeDto;
 import com.dut.doctorcare.dto.request.UserRegistrationDto;
 import com.dut.doctorcare.dto.request.UserUpdateOrDeleteDto;
 import com.dut.doctorcare.dto.response.ApiResponse;
+import com.dut.doctorcare.dto.response.DoctorResponse;
 import com.dut.doctorcare.dto.response.UserResponseDto;
 import com.dut.doctorcare.exception.EntityOperationException;
 import com.dut.doctorcare.service.iface.UserService;
@@ -35,10 +37,10 @@ public class UserController {
     }
     @PostMapping
     @RequestMapping("/register/doctor")
-    public ApiResponse<UserResponseDto> registerDoctor(@RequestBody @Valid UserRegistrationDto userRegistrationDto) {
-        ApiResponse<UserResponseDto> response = new ApiResponse<>();
+    public ApiResponse<DoctorResponse> registerDoctor(@RequestBody @Valid CreateDoctorRequest request) {
+        ApiResponse<DoctorResponse> response = new ApiResponse<>();
         response.setStatus(HttpStatus.OK.value());
-        response.setData(userService.registerDoctor(userRegistrationDto));
+        response.setData(userService.registerDoctor(request));
         return response;
     }
 

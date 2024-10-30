@@ -10,4 +10,5 @@ import java.util.List;
 public interface ScheduleService {
     List<ScheduleResponse> createSchedule(ScheduleRequest request);
     List<ShiftsResponse> getShiftsAvailable(LocalDate date);
+    List<ScheduleResponse> getScheduleByDate(LocalDate date);
 }
