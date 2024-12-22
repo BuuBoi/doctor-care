@@ -3,6 +3,13 @@ spring:
     name: doctorcare
   profiles:
     active: local
+  doc:
+    openapi:
+      api-docs:
+        path: /api-docs
+      swagger-ui:
+        path: /swagger-ui-custom.html
+        operationsSorter: method
 logging:
   file:
     name: ${logging.file.path}/${spring.application.name}.log
