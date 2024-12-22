@@ -9,8 +9,7 @@ import lombok.experimental.SuperBuilder;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
-import java.util.List;
-import java.util.UUID;
+import java.util.*;
 
 @Getter
 @Setter
@@ -30,6 +29,18 @@ public class Doctor extends BaseClazz {
     @JoinColumn(name = "specialization_id")
     private Specialization specialization;
 
+    @ManyToOne
+    @JoinColumn(name = "service_id")
+    private Service service;
+
+    @ManyToMany
+    @JoinTable(
+            name = "doctor_symptom", // Tên bảng trung gian
+            joinColumns = @JoinColumn(name = "doctor_id"), // Khóa ngoại đến bảng Doctor
+            inverseJoinColumns = @JoinColumn(name = "symptom_id") // Khóa ngoại đến bảng Symptom
+    )
+    private List<Symptom> symptoms = new ArrayList<Symptom>();
+
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "address_id", referencedColumnName = "id")
     private Address address;
@@ -46,8 +57,9 @@ public class Doctor extends BaseClazz {
     @OneToMany(mappedBy = "doctor")
     private List<Schedule> schedules;
 
-    private String firstName;
-    private String lastName;
+    @Column(name = "full_name", nullable = false)
+    private String fullName;
+
     private String phone;
     private String position;
     private Patient.Gender gender;

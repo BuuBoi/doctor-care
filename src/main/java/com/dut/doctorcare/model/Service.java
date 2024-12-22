@@ -11,7 +11,6 @@ import lombok.Setter;
 import lombok.experimental.SuperBuilder;
 
 import java.util.List;
-import java.util.Set;
 
 @Getter
 @Setter
@@ -19,19 +18,19 @@ import java.util.Set;
 @AllArgsConstructor
 @SuperBuilder
 @Entity
-@Table(name = "specialists")
-public class Specialization extends BaseClazz{
-
+@Table(name = "services")
+public class Service extends BaseClazz{
     @Column(nullable = false, unique = true, name = "name")
     private String name;
-
     @Column(nullable = false, unique = true, name = "slug")
     private String slug;
 
+    @Column(name = "description")
+    private String description;
+    @Column(name = "price")
+    private Double price;
     @Column(name = "image_url")
     private String imageUrl;
-
-    @OneToMany(mappedBy = "specialization")
-    private Set<Doctor> doctors;
-
+    @OneToMany(mappedBy = "service")
+    private List<Doctor> doctors;
 }

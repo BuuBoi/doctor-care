@@ -1,15 +1,13 @@
 package com.dut.doctorcare.model;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.OneToMany;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.experimental.SuperBuilder;
-
+import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
@@ -19,9 +17,8 @@ import java.util.Set;
 @AllArgsConstructor
 @SuperBuilder
 @Entity
-@Table(name = "specialists")
-public class Specialization extends BaseClazz{
-
+@Table(name = "symptoms")
+public class Symptom extends BaseClazz {
     @Column(nullable = false, unique = true, name = "name")
     private String name;
 
@@ -31,7 +28,7 @@ public class Specialization extends BaseClazz{
     @Column(name = "image_url")
     private String imageUrl;
 
-    @OneToMany(mappedBy = "specialization")
-    private Set<Doctor> doctors;
+    @ManyToMany(mappedBy = "symptoms") // Định nghĩa bên bị chi phối
+    private List<Doctor> doctors = new ArrayList<>();
 
 }

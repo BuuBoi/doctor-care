@@ -83,9 +83,9 @@ public class UserServiceImpl implements UserService {
         if (userDao.findByEmail(userRegistrationDto.getEmail()).isPresent()) {
             throw new AppException(ErrorCode.Email_ALREADY_EXISTS);
         }
-        Role role = roleService.findRole(Role.RoleName.PATIENT);
+        Role role = roleService.findRole(Role.RoleName.USER);
         if (role == null) {
-            role = roleService.createRole(Role.RoleName.PATIENT);
+            role = roleService.createRole(Role.RoleName.USER);
         }
         User user = new User();
         user = userMapper.toUser(userRegistrationDto);

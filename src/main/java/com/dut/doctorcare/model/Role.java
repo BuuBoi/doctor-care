@@ -23,7 +23,7 @@ public class Role extends BaseClazz {
 	private List<User> users = new ArrayList<>();
 
 	public enum RoleName {
-		ADMIN, DOCTOR, PATIENT
+		ADMIN, DOCTOR, USER
 	}
 
 }

@@ -21,20 +21,14 @@ import java.util.UUID;
 @Table(name = "patients")
 public class Patient extends BaseClazz {
 
-//    @Id
-//    @Column(name = "id")
-//    private UUID id;
 
     @OneToOne(fetch = FetchType.LAZY)
     @MapsId
     @JoinColumn(name = "id")
     private User user;
 
-    @Column(name = "first_name", nullable = false)
-    private String firstName;
-
-    @Column(name = "last_name", nullable = false)
-    private String lastName;
+    @Column(name = "full_name", nullable = false)
+    private String fullName;
 
     @Column(name = "phone_number")
     private String phoneNumber;
@@ -42,6 +36,9 @@ public class Patient extends BaseClazz {
     @Enumerated(EnumType.STRING)
     @Column(name = "gender")
     private Gender gender;
+
+    @Column(name = "avatar")
+    private String avatar;
 
     @Column(name = "date_of_birth")
     private LocalDate dateOfBirth;

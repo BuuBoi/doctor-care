@@ -15,27 +15,15 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @SuperBuilder
 @Entity
-@Table(name = "schedules")
-public class Schedule extends BaseClazz{
-    private LocalDate date;
-
-    @Enumerated(EnumType.STRING)
-    private Status status;
-
-    @ManyToOne
-    @JoinColumn(name = "shift_id")
-    private Shifts shifts;
-
+@Table(name = "doctor_day_offs")
+public class Doctor_Day_Offs extends BaseClazz{
     @ManyToOne
     @JoinColumn(name = "doctor_id")
     private Doctor doctor;
 
-//    @OneToOne(mappedBy = "schedule")
-//    private Appointment appointment;
+    @Column(name = "off_date")
+    private LocalDate offDate;
 
-    public enum Status {
-        EMPTY,
-        WAITING,
-        BOOKED
-    }
+    @Column(name = "reason")
+    private String reason;
 }

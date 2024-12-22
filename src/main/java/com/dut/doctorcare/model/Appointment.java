@@ -8,6 +8,7 @@ import lombok.Setter;
 import lombok.experimental.SuperBuilder;
 
 import java.time.LocalDate;
+import java.time.LocalTime;
 
 @Getter
 @Setter
@@ -15,14 +16,13 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @SuperBuilder
 @Entity
-@Table(name = "appointments")
+@Table(name = "appointments", uniqueConstraints = {
+        @UniqueConstraint(columnNames = {"doctor_id", "appointment_date", "time"})})
 public class Appointment extends BaseClazz {
-
-    private LocalDate date;
 
     @Enumerated(EnumType.STRING)
     private Status status;
-
+    @Column(name="fee")
     private Double fee;
 
     @ManyToOne
@@ -33,9 +33,11 @@ public class Appointment extends BaseClazz {
     @JoinColumn(name = "patient_id")
     private Patient patient;
 
-    @OneToOne
-    @JoinColumn(name = "schedule_id")
-    private Schedule schedule;
+    @Column(name = "appointment_date", nullable = false)
+    private LocalDate appointmentDate;
+
+    @Column(name = "time", nullable = false)
+    private String time;
 
     public enum Status {
         PENDING, ACCEPTED, REJECTED, COMPLETED

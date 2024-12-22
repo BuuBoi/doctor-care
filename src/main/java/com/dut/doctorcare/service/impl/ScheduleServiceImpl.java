@@ -67,21 +67,21 @@ public class ScheduleServiceImpl implements ScheduleService {
         //List<Appointment> appointments = schedules.stream().map(Schedule::getAppointment).toList();
         List<Shifts> shifts1 = schedules.stream().map(Schedule::getShifts).toList();
         List<ShiftsResponse> shiftsResponses = new ArrayList<>();
-        shiftsResponses = allShifts.stream().map(
-                shifts -> {
-                    ShiftsResponse shiftsResponse = new ShiftsResponse();
-                    shiftsResponse = shiftsMapper.toShiftsResponse(shifts);
-                    if (shifts1.contains(shifts)) {
-                        shiftsResponse.setScheduled(true);
-                        boolean hasAppointment = schedules.stream().filter(schedule -> schedule.getShifts().equals(shifts))
-                                .anyMatch(schedule -> schedule.getAppointment() != null);
-                        shiftsResponse.setHasAppointment(hasAppointment);
-                    } else {
-                        shiftsResponse.setScheduled(false);
-                    }
-                    return shiftsResponse;
-                }
-        ).toList();
+//        shiftsResponses = allShifts.stream().map(
+//                shifts -> {
+//                    ShiftsResponse shiftsResponse = new ShiftsResponse();
+//                    shiftsResponse = shiftsMapper.toShiftsResponse(shifts);
+//                    if (shifts1.contains(shifts)) {
+//                        shiftsResponse.setScheduled(true);
+//                        boolean hasAppointment = schedules.stream().filter(schedule -> schedule.getShifts().equals(shifts))
+//                                .anyMatch(schedule -> schedule.getAppointment() != null);
+//                        shiftsResponse.setHasAppointment(hasAppointment);
+//                    } else {
+//                        shiftsResponse.setScheduled(false);
+//                    }
+//                    return shiftsResponse;
+//                }
+//        ).toList();
         return shiftsResponses;
     }
 

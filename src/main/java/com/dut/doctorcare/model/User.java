@@ -37,4 +37,14 @@ public class User extends BaseClazz {
 
 	@OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
 	private Doctor doctor;
+
+	public String getFullName() {
+		if (this.patient != null) {
+			return this.patient.getFullName();
+		}
+		if (this.doctor != null) {
+			return this.doctor.getFullName();
+		}
+		return null;
+	}
 }
