@@ -4,9 +4,13 @@ server:
     context-path: /DoctorCare
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/doctorcare888
+    # url: jdbc:mysql://localhost:3306/doctorcare888
+    # username: root
+    # password: 120101
+    # driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/doctorcare
     username: root
-    password: 120101
+    password: 10042001
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     properties:

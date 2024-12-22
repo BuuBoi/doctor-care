@@ -5,7 +5,7 @@ import com.dut.doctorcare.model.Specialization;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 
-@Mapper(componentModel = "spring",uses = {CustomeMapper.class})
+@Mapper(componentModel = "spring", uses = { CustomerMapper.class })
 public interface SpecializationMapper {
 
     @Mapping(target = "id", source = "id", qualifiedByName = "uUIDToString")

@@ -7,7 +7,7 @@ import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.MappingTarget;
 
-@Mapper(componentModel = "spring", uses = {AddressMapper.class, CustomeMapper.class, SpecializationMapper.class})
+@Mapper(componentModel = "spring", uses = { AddressMapper.class, CustomerMapper.class, SpecializationMapper.class })
 public interface DoctorMapper {
     @Mapping(target = "id", ignore = true) // Bỏ qua trường id khi mapping
     @Mapping(target = "gender", source = "gender", qualifiedByName = "stringToGender")

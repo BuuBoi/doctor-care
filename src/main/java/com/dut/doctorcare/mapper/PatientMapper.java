@@ -7,7 +7,7 @@ import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.MappingTarget;
 
-@Mapper(componentModel = "spring", uses = {AddressMapper.class, CustomeMapper.class})
+@Mapper(componentModel = "spring", uses = { AddressMapper.class, CustomerMapper.class })
 public interface PatientMapper {
     @Mapping(target = "gender", source = "gender", qualifiedByName = "stringToGender")
     @Mapping(target = "dateOfBirth", source = "dateOfBirth", qualifiedByName = "stringToLocalDate")

@@ -34,8 +34,7 @@ public class Doctor extends BaseClazz {
     private Service service;
 
     @ManyToMany
-    @JoinTable(
-            name = "doctor_symptom", // Tên bảng trung gian
+    @JoinTable(name = "doctor_symptom", // Tên bảng trung gian
             joinColumns = @JoinColumn(name = "doctor_id"), // Khóa ngoại đến bảng Doctor
             inverseJoinColumns = @JoinColumn(name = "symptom_id") // Khóa ngoại đến bảng Symptom
     )
@@ -53,9 +52,6 @@ public class Doctor extends BaseClazz {
 
     @OneToMany(mappedBy = "doctor")
     private List<Review> reviews;
-
-    @OneToMany(mappedBy = "doctor")
-    private List<Schedule> schedules;
 
     @Column(name = "full_name", nullable = false)
     private String fullName;

@@ -14,7 +14,7 @@ import lombok.experimental.SuperBuilder;
 @SuperBuilder
 @Entity
 @Table(name = "reviews")
-public class Review extends BaseClazz{
+public class Review extends BaseClazz {
 
     private double rating;
     private String comment;

@@ -17,7 +17,7 @@ import lombok.experimental.SuperBuilder;
 @SuperBuilder
 @Entity
 @Table(name = "history_medical")
-public class HistoryMedical extends BaseClazz{
+public class HistoryMedical extends BaseClazz {
     @ManyToOne
     @JoinColumn(name = "patient_id", nullable = false)
     private Patient patient;
@@ -27,7 +27,4 @@ public class HistoryMedical extends BaseClazz{
     private Doctor doctor;
 
     private String PrescriptionNotes;
-
-
-
 }

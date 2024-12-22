@@ -7,8 +7,6 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.experimental.SuperBuilder;
 
-import java.time.LocalTime;
-
 @Getter
 @Setter
 @NoArgsConstructor
@@ -16,7 +14,7 @@ import java.time.LocalTime;
 @SuperBuilder
 @Entity
 @Table(name = "weekly_availlable")
-public class WeeklyAvailable extends BaseClazz{
+public class WeeklyAvailable extends BaseClazz {
     @Column(name = "date_of_week")
     private String dateOfWeek;
 
