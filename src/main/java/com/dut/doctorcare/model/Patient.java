@@ -24,9 +24,6 @@ public class Patient extends BaseClazz {
     @JoinColumn(name = "id")
     private User user;
 
-    @Column(name = "full_name", nullable = false)
-    private String fullName;
-
     @Column(name = "phone_number")
     private String phoneNumber;
 

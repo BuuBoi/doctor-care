@@ -15,7 +15,6 @@ import com.dut.doctorcare.exception.ErrorCode;
 import com.dut.doctorcare.mapper.AddressMapper;
 import com.dut.doctorcare.mapper.DoctorMapper;
 import com.dut.doctorcare.mapper.UserMapper;
-import com.dut.doctorcare.model.Address;
 import com.dut.doctorcare.model.Doctor;
 import com.dut.doctorcare.model.Role;
 import com.dut.doctorcare.model.User;
@@ -25,13 +24,10 @@ import com.dut.doctorcare.utils.UserUtils;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PostAuthorize;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.Collections;
@@ -58,7 +54,7 @@ public class UserServiceImpl implements UserService {
             throw new AppException(ErrorCode.Email_ALREADY_EXISTS);
         }
         // Create user
-         User user = new User();
+        User user = new User();
         Role role = roleService.findRole(Role.RoleName.DOCTOR);
         if (role == null) {
             role = roleService.createRole(Role.RoleName.DOCTOR);
@@ -78,6 +74,7 @@ public class UserServiceImpl implements UserService {
 
         return doctorMapper.toDoctorResponse(doctor);
     }
+
     @Override
     public UserResponseDto registerPatient(UserRegistrationDto userRegistrationDto) {
         if (userDao.findByEmail(userRegistrationDto.getEmail()).isPresent()) {
@@ -98,13 +95,16 @@ public class UserServiceImpl implements UserService {
     @Override
     @PreAuthorize("hasRole('ADMIN')")
     public List<UserResponseDto> getAllUsers() {
-        var authentication = SecurityContextHolder.getContext().getAuthentication(); //lay toan bo thong tin cua user dang dang nhap
+        var authentication = SecurityContextHolder.getContext().getAuthentication(); // lay toan bo thong tin cua user
+                                                                                     // dang dang nhap
         log.info("email: {}", authentication.getName());
-        log.info("role: {}", authentication.getAuthorities().stream().findFirst().map(GrantedAuthority::getAuthority).get()); //lay ra role cua user dang dang nhap
-        return userDao.findAll(Collections.emptyMap()).stream().map(UserUtils::convertToDTO).collect(Collectors.toList());
+        log.info("role: {}",
+                authentication.getAuthorities().stream().findFirst().map(GrantedAuthority::getAuthority).get());
+        return userDao.findAll(Collections.emptyMap()).stream().map(UserUtils::convertToDTO)
+                .collect(Collectors.toList());
     }
 
-    //dam bao ren user chi lay duoc thong tin cua chinh minh hoac la admin
+    // dam bao ren user chi lay duoc thong tin cua chinh minh hoac la admin
     @PostAuthorize("returnObject.email == authentication.getName() || hasRole('ADMIN')")
     @Override
     public UserResponseDto getUser(String id) {
@@ -112,8 +112,8 @@ public class UserServiceImpl implements UserService {
         return UserUtils.convertToDTO(user);
     }
 
-    //lay thong tin user dang dang nhap ma khong can truyen id
-    //sau khi dang nhap thanh cong thi info dc luu tru trong security context
+    // lay thong tin user dang dang nhap ma khong can truyen id
+    // sau khi dang nhap thanh cong thi info dc luu tru trong security context
     @Transactional
     @Override
     public UserResponseDto getMyProfile() {
@@ -122,7 +122,6 @@ public class UserServiceImpl implements UserService {
         User user = userDao.findByEmail(email).orElseThrow(() -> new AppException(ErrorCode.USER_NOT_FOUND));
         return UserUtils.convertToDTO(user);
     }
-
 
     @Override
     @Transactional
@@ -133,6 +132,7 @@ public class UserServiceImpl implements UserService {
 
         }).orElseThrow(() -> new AppException(ErrorCode.USER_NOT_FOUND));
     }
+
     @Transactional
     @Override
     @PreAuthorize("hasRole('ADMIN')")
@@ -141,8 +141,6 @@ public class UserServiceImpl implements UserService {
         user.setActive(false);
         userDao.update(user);
     }
-
-
 
     @Transactional
     public void changePassword(String userId, PasswordChangeDto passwordChangeDto) {

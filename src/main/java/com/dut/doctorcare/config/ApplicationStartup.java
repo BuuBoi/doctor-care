@@ -40,6 +40,7 @@ public class ApplicationStartup {
             User adminUser = new User();
             adminUser.setEmail("admin888@gmail.com");
             adminUser.setPasswordHash(passwordEncoder.encode("admin888"));
+            adminUser.setFullName("Admin888");
             adminUser.setRole(adminRole);
             userDao.save(adminUser);
             log.info("Admin user created");

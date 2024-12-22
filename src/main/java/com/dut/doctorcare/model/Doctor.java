@@ -53,9 +53,6 @@ public class Doctor extends BaseClazz {
     @OneToMany(mappedBy = "doctor")
     private List<Review> reviews;
 
-    @Column(name = "full_name", nullable = false)
-    private String fullName;
-
     private String phone;
     private String position;
     private Patient.Gender gender;
