@@ -16,6 +16,9 @@ import lombok.experimental.SuperBuilder;
 @Table(name = "users")
 public class User extends BaseClazz {
 
+	@Column(name = "full_name", nullable = false)
+	private String fullName;
+
 	@Column(name = "email", nullable = false, unique = true)
 	private String email;
 
@@ -32,13 +35,4 @@ public class User extends BaseClazz {
 	@OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
 	private Doctor doctor;
 
-	public String getFullName() {
-		if (this.patient != null) {
-			return this.patient.getFullName();
-		}
-		if (this.doctor != null) {
-			return this.doctor.getFullName();
-		}
-		return null;
-	}
 }
