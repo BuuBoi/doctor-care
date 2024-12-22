@@ -6,11 +6,9 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.experimental.SuperBuilder;
-import org.springframework.data.annotation.Id;
 
 import java.time.LocalDate;
 import java.util.List;
-import java.util.UUID;
 
 @Getter
 @Setter
@@ -20,7 +18,6 @@ import java.util.UUID;
 @Entity
 @Table(name = "patients")
 public class Patient extends BaseClazz {
-
 
     @OneToOne(fetch = FetchType.LAZY)
     @MapsId
@@ -55,6 +52,7 @@ public class Patient extends BaseClazz {
 
     @OneToMany(mappedBy = "patient")
     private List<Review> reviews;
+
     // Enum for Gender
     public enum Gender {
         MALE, FEMALE, OTHER

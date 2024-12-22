@@ -36,14 +36,16 @@ public class DoctorServiceImpl implements DoctorService {
     private final AddressDao addressDao;
     private final UserDao userDao;
     private final SpecializationDao specializationDao;
+
     public DoctorResponse saveOrUpdate(DoctorRequest request) {
         var context = SecurityContextHolder.getContext();
         var email = context.getAuthentication().getName();
         User user = userDao.findByEmail(email).orElseThrow(() -> new AppException(ErrorCode.USER_NOT_FOUND));
         Doctor doctor = doctorDao.findById(user.getId()).orElse(null);
-        if(doctor == null) {
+        if (doctor == null) {
             Address address = addressDao.save(addressMapper.toAddress(request.getAddressDto()));
-            Specialization spec = specializationDao.findById(UUID.fromString(request.getSpecializationDto().getId())).orElseThrow(() -> new AppException(ErrorCode.USER_NOT_FOUND));
+            Specialization spec = specializationDao.findById(UUID.fromString(request.getSpecializationDto().getId()))
+                    .orElseThrow(() -> new AppException(ErrorCode.USER_NOT_FOUND));
             doctor = doctorMapper.toDoctor(request);
             doctor.setAddress(address);
             doctor.setUser(user);
@@ -52,7 +54,7 @@ public class DoctorServiceImpl implements DoctorService {
         } else {
             doctorMapper.updateDoctorFromDto(request, doctor);
             Address address = doctor.getAddress();
-            if(address.getProvince().equals(request.getAddressDto().getProvince()) ||
+            if (address.getProvince().equals(request.getAddressDto().getProvince()) ||
                     address.getDistrict().equals(request.getAddressDto().getDistrict()) ||
                     address.getWard().equals(request.getAddressDto().getWard()) ||
                     address.getDetails().equals(request.getAddressDto().getDetails())) {
@@ -60,7 +62,8 @@ public class DoctorServiceImpl implements DoctorService {
                 address = addressDao.update(address);
                 doctor.setAddress(address);
             }
-            Specialization spec = specializationDao.findById(UUID.fromString(request.getSpecializationDto().getId())).orElseThrow(() -> new AppException(ErrorCode.USER_NOT_FOUND));
+            Specialization spec = specializationDao.findById(UUID.fromString(request.getSpecializationDto().getId()))
+                    .orElseThrow(() -> new AppException(ErrorCode.USER_NOT_FOUND));
             if (!doctor.getSpecialization().getId().equals(spec.getId())) {
                 doctor.setSpecialization(spec);
             }

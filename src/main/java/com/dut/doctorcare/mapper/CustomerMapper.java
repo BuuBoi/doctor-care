@@ -2,7 +2,6 @@ package com.dut.doctorcare.mapper;
 
 import com.dut.doctorcare.model.Patient;
 import com.dut.doctorcare.model.Role;
-import com.dut.doctorcare.model.Schedule;
 import org.mapstruct.Named;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -13,7 +12,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.UUID;
 
 @Component
-public class CustomeMapper {
+public class CustomerMapper {
     private final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
 
     @Autowired
@@ -66,9 +65,9 @@ public class CustomeMapper {
         return role.name();
     }
 
-    @Named("statusToString")
-    public String statusToString(Schedule.Status status) {
-        return status.name();
-    }
+    // @Named("statusToString")
+    // public String statusToString(Schedule.Status status) {
+    // return status.name();
+    // }
 
 }

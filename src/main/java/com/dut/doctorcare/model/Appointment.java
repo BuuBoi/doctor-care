@@ -8,7 +8,6 @@ import lombok.Setter;
 import lombok.experimental.SuperBuilder;
 
 import java.time.LocalDate;
-import java.time.LocalTime;
 
 @Getter
 @Setter
@@ -17,12 +16,12 @@ import java.time.LocalTime;
 @SuperBuilder
 @Entity
 @Table(name = "appointments", uniqueConstraints = {
-        @UniqueConstraint(columnNames = {"doctor_id", "appointment_date", "time"})})
+        @UniqueConstraint(columnNames = { "doctor_id", "appointment_date", "time" }) })
 public class Appointment extends BaseClazz {
 
     @Enumerated(EnumType.STRING)
     private Status status;
-    @Column(name="fee")
+    @Column(name = "fee")
     private Double fee;
 
     @ManyToOne

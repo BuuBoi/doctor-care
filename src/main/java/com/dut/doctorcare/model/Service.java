@@ -19,7 +19,7 @@ import java.util.List;
 @SuperBuilder
 @Entity
 @Table(name = "services")
-public class Service extends BaseClazz{
+public class Service extends BaseClazz {
     @Column(nullable = false, unique = true, name = "name")
     private String name;
     @Column(nullable = false, unique = true, name = "slug")

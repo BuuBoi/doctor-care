@@ -12,9 +12,7 @@ import java.time.LocalDateTime;
 import java.util.UUID;
 
 @MappedSuperclass
-@JsonIdentityInfo(
-        generator = ObjectIdGenerators.PropertyGenerator.class,
-        property = "id")
+@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
 @Getter
 @Setter
 @NoArgsConstructor

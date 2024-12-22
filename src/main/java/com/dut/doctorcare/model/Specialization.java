@@ -10,7 +10,6 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.experimental.SuperBuilder;
 
-import java.util.List;
 import java.util.Set;
 
 @Getter
@@ -20,7 +19,7 @@ import java.util.Set;
 @SuperBuilder
 @Entity
 @Table(name = "specialists")
-public class Specialization extends BaseClazz{
+public class Specialization extends BaseClazz {
 
     @Column(nullable = false, unique = true, name = "name")
     private String name;

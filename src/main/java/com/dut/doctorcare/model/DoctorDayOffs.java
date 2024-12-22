@@ -16,7 +16,7 @@ import java.time.LocalDate;
 @SuperBuilder
 @Entity
 @Table(name = "doctor_day_offs")
-public class Doctor_Day_Offs extends BaseClazz{
+public class DoctorDayOffs extends BaseClazz {
     @ManyToOne
     @JoinColumn(name = "doctor_id")
     private Doctor doctor;

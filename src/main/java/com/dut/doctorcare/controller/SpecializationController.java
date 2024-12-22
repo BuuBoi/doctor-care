@@ -16,18 +16,17 @@ import java.util.List;
 public class SpecializationController {
     private final SpecializationService specializationService;
 
-    @PostMapping
-    @RequestMapping("/create")
+    @PostMapping("/create")
     public ApiResponse<SpecializationDto> createSpecialization(@RequestBody SpecializationDto specializationDto) {
-       SpecializationDto specializationDto1 = specializationService.createSpecialization(specializationDto.getName());
+        SpecializationDto specializationDto1 = specializationService.createSpecialization(specializationDto.getName());
         return ApiResponse.<SpecializationDto>builder()
                 .status(200)
                 .data(specializationDto1)
                 .build();
 
     }
+
     @GetMapping
-    @RequestMapping
     public ApiResponse<List<SpecializationDto>> getAllSpecializations() {
         List<SpecializationDto> specializationDtoList = specializationService.getAllSpecialization();
         return ApiResponse.<List<SpecializationDto>>builder()
@@ -35,8 +34,8 @@ public class SpecializationController {
                 .data(specializationDtoList)
                 .build();
     }
-    @DeleteMapping
-    @RequestMapping("/{id}")
+
+    @DeleteMapping("/{id}")
     public ApiResponse<String> deleteSpecialization(@PathVariable String id) {
         specializationService.deleteSpecialization(id);
         return ApiResponse.<String>builder()
@@ -44,5 +43,4 @@ public class SpecializationController {
                 .data("Specialization deleted")
                 .build();
     }
-
 }

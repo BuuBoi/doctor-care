@@ -10,6 +10,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 @EnableScheduling
 public class DoctorCareApplication {
     private static final Logger LOGGER = LoggerFactory.getLogger(DoctorCareApplication.class);
+
     public static void main(String[] args) {
         SpringApplication.run(DoctorCareApplication.class, args);
         LOGGER.info("App is working!!");
